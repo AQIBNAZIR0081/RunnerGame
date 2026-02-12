@@ -24,11 +24,12 @@ public class PlayerMovement : MonoBehaviour
     public ParticleSystem particle;
 
 
-    private Rigidbody rb;
     private bool jumpAllowed;
-    Vector3 pointerStartPosition;
-    Vector3 deltaPosition;
-    Vector3 pointerEndPosition;
+    private Rigidbody rb;
+    private Animator anim;
+    private Vector3 pointerStartPosition;
+    private Vector3 deltaPosition;
+    private Vector3 pointerEndPosition;
 
     //private bool isMovingLeft = false;
     //private bool isMovingRight = false;
@@ -36,6 +37,7 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {   
         rb = GetComponent<Rigidbody>();
+        anim = GetComponent<Animator>();
 
     }
 
@@ -47,12 +49,14 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         Vector3 movementDirection = transform.forward;
+        anim.SetBool("IsRunning", true);
         transform.Translate(movementDirection * speed * Time.fixedDeltaTime);
 
         Jump();
 
         if (transform.position.y < -0.5f)
         {
+            anim.SetBool("IsRunning", false);
             GameManager.Instance.LoseGame();
         }
     }
@@ -114,6 +118,7 @@ public class PlayerMovement : MonoBehaviour
         {
             jumpSound.Play();
             particle.Play();
+            anim.SetTrigger("IsJump");
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
 
             jumpAllowed = false;
