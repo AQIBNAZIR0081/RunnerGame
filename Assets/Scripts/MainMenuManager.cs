@@ -21,7 +21,7 @@ public class MainMenuManager : MonoBehaviour
     // Start the game on button click
     public void StartGame()
     {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("MissionSelection");
     }
 
     // Mute or unmute the background music on button click
