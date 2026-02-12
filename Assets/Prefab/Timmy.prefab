@@ -6864,8 +6864,8 @@ Animator:
   m_Avatar: {fileID: 9000000, guid: 0b7a36b3dafc4714a8940e6b27a6abe3, type: 3}
   m_Controller: {fileID: 9100000, guid: 3506547b561fa344d84e5062f7eb9caf, type: 2}
   m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_UpdateMode: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_AnimatePhysics: 0
@@ -6929,19 +6929,19 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7728099459630632071}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 72c1dadfe8fdcf84a839d717850e238f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   speed: 10
   sidewaysSpeed: 10
-  swipDistanceY: 100
-  jumpForce: 12
+  swipDistanceY: 20
+  jumpForce: 5
   minClampPosition: -4
   maxClampPosition: 4
   jumpSound: {fileID: 0}
-  particle: {fileID: 0}
+  particle: {fileID: 4042793762873720558}
 --- !u!114 &3228286773193085210
 MonoBehaviour:
   m_ObjectHideFlags: 0

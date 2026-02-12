@@ -54,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
 
         Jump();
 
-        if (rb.position.y < -0.1f)
+        if (rb.position.y < -0.3f)
         {
             anim.SetBool("IsRunning", false);
             GameManager.Instance.LoseGame();
@@ -81,7 +81,7 @@ public class PlayerMovement : MonoBehaviour
 
                 Vector3 moveDirection = new Vector3(deltaPosition.x, 0, 0);
 
-                if (transform.position.x > minClampPosition || transform.position.x < maxClampPosition)
+                if (transform.position.x < minClampPosition || transform.position.x > maxClampPosition)
                 {
                     transform.position = new Vector3(
                         Mathf.Clamp(transform.position.x, minClampPosition, maxClampPosition),
@@ -118,8 +118,8 @@ public class PlayerMovement : MonoBehaviour
         {
             jumpSound.Play();
             particle.Play();
-            anim.SetTrigger("IsJump");
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            anim.SetTrigger("IsJumped");
 
             jumpAllowed = false;
         }
