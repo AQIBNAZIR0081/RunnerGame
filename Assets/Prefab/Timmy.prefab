@@ -6864,8 +6864,8 @@ Animator:
   m_Avatar: {fileID: 9000000, guid: 0b7a36b3dafc4714a8940e6b27a6abe3, type: 3}
   m_Controller: {fileID: 9100000, guid: 3506547b561fa344d84e5062f7eb9caf, type: 2}
   m_CullingMode: 1
-  m_UpdateMode: 1
-  m_ApplyRootMotion: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_AnimatePhysics: 0
@@ -6937,7 +6937,7 @@ MonoBehaviour:
   speed: 10
   sidewaysSpeed: 10
   swipDistanceY: 20
-  jumpForce: 5
+  jumpForce: 8
   minClampPosition: -4
   maxClampPosition: 4
   jumpSound: {fileID: 0}
