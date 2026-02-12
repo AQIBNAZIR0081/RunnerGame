@@ -14,8 +14,8 @@ public class PlayerMovement : MonoBehaviour
 
     [Space]
     [Header("Clamping Setting")]
-    public float minClampPosition = -4f;
-    public float maxClampPosition = 4f;
+    public float minClampPosition = -3f;
+    public float maxClampPosition = 3f;
 
     [Header("Audio Setting")]
     public AudioSource jumpSound;
@@ -54,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
 
         Jump();
 
-        if (transform.position.y < -0.5f)
+        if (rb.position.y < -0.1f)
         {
             anim.SetBool("IsRunning", false);
             GameManager.Instance.LoseGame();

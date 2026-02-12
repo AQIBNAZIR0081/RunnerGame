@@ -283,7 +283,7 @@ GameObject:
   - component: {fileID: 13145353}
   - component: {fileID: 13145352}
   - component: {fileID: 13145351}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: QuitButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -416,7 +416,7 @@ GameObject:
   - component: {fileID: 15456792}
   - component: {fileID: 15456791}
   - component: {fileID: 15456790}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: ReplayButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1135,7 +1135,7 @@ GameObject:
   - component: {fileID: 121456464}
   - component: {fileID: 121456466}
   - component: {fileID: 121456465}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (Legacy)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1545,7 +1545,7 @@ GameObject:
   - component: {fileID: 283204882}
   - component: {fileID: 283204884}
   - component: {fileID: 283204883}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: WinPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2774,7 +2774,7 @@ GameObject:
   - component: {fileID: 823198609}
   - component: {fileID: 823198611}
   - component: {fileID: 823198610}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (Legacy)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2933,7 +2933,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 864135403}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3503,7 +3503,7 @@ GameObject:
   - component: {fileID: 1154276449}
   - component: {fileID: 1154276448}
   - component: {fileID: 1154276450}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: WinLoseCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4152,7 +4152,7 @@ GameObject:
   - component: {fileID: 1358855166}
   - component: {fileID: 1358855168}
   - component: {fileID: 1358855167}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: GameOverText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4678,7 +4678,7 @@ GameObject:
   - component: {fileID: 1598284692}
   - component: {fileID: 1598284691}
   - component: {fileID: 1598284690}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: QuitButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5553,7 +5553,7 @@ GameObject:
   - component: {fileID: 1815587685}
   - component: {fileID: 1815587687}
   - component: {fileID: 1815587686}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (Legacy)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6236,7 +6236,7 @@ GameObject:
   - component: {fileID: 2056039430}
   - component: {fileID: 2056039429}
   - component: {fileID: 2056039431}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: LosePanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6414,7 +6414,7 @@ GameObject:
   - component: {fileID: 2106174907}
   - component: {fileID: 2106174909}
   - component: {fileID: 2106174908}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: GameOverText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6675,6 +6675,14 @@ PrefabInstance:
     - target: {fileID: 2866374146358341035, guid: b5a3737d7b5bf7d4a85a67392692fc75, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2866374146358341035, guid: b5a3737d7b5bf7d4a85a67392692fc75, type: 3}
+      propertyPath: maxClampPosition
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2866374146358341035, guid: b5a3737d7b5bf7d4a85a67392692fc75, type: 3}
+      propertyPath: minClampPosition
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 3228286773193085210, guid: b5a3737d7b5bf7d4a85a67392692fc75, type: 3}
       propertyPath: hitSound
