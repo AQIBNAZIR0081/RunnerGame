@@ -48,9 +48,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Vector3 movementDirection = transform.forward;
+        
         anim.SetBool("IsRunning", true);
-        transform.Translate(movementDirection * speed * Time.fixedDeltaTime);
+        transform.Translate(Vector3.forward * speed * Time.fixedDeltaTime);
 
         Jump();
 
