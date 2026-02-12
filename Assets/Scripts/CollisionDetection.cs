@@ -71,6 +71,8 @@ public class CollisionDetection : MonoBehaviour
     }
 
 
+
+    #region Health
     private void ReduceHealth(float decreaseAmount)
     {
         currentHealth = Mathf.Clamp(currentHealth - decreaseAmount, 0, 1);
@@ -89,6 +91,10 @@ public class CollisionDetection : MonoBehaviour
         healthSlider.value = currentHealth;
     }
 
+    #endregion
+
+    #region LocalScaleChange
+    /*
     private void ScaleReduction()
     {
         Vector3 currentScale = transform.localScale;
@@ -114,4 +120,6 @@ public class CollisionDetection : MonoBehaviour
         // Increase the scale of the player by ScaleInreasingAmount when it exit a "SizeIncreaser" trigger
         transform.localScale = new Vector3(newXScale, newYScale, newZScale);
     }
+    */
+    #endregion
 }

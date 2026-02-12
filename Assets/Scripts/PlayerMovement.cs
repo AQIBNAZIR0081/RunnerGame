@@ -59,7 +59,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void SwipController()
     {
-#if UNITY_ANDROID
         if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
@@ -95,7 +94,10 @@ public class PlayerMovement : MonoBehaviour
             {
                 pointerEndPosition = touch.position;
 
-                float swipDiffVerticle = (new Vector3(0, pointerEndPosition.y, 0) - new Vector3(0, pointerStartPosition.y, 0)).magnitude;
+                Vector3 pointerYend = new Vector3(0, pointerEndPosition.y, 0);
+                Vector3 pointerYstart = new Vector3(0, pointerStartPosition.y, 0);
+
+                float swipDiffVerticle = ( pointerYend - pointerYstart).magnitude;
 
                 if (pointerEndPosition.y > pointerStartPosition.y && swipDiffVerticle > swipDistanceY && rb.linearVelocity.y == 0)
                 {
@@ -104,7 +106,6 @@ public class PlayerMovement : MonoBehaviour
             }
 
         }
-#endif
     }
 
     private void Jump()
