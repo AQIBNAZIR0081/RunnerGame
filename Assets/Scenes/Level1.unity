@@ -5224,6 +5224,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1728069281}
   m_CullTransparentMesh: 1
+--- !u!198 &1747259282 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4042793762873720558, guid: b5a3737d7b5bf7d4a85a67392692fc75, type: 3}
+  m_PrefabInstance: {fileID: 4631006919637459052}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1760973871
 GameObject:
   m_ObjectHideFlags: 0
@@ -6660,9 +6665,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2866374146358341035, guid: b5a3737d7b5bf7d4a85a67392692fc75, type: 3}
+      propertyPath: particle
+      value: 
+      objectReference: {fileID: 1747259282}
+    - target: {fileID: 2866374146358341035, guid: b5a3737d7b5bf7d4a85a67392692fc75, type: 3}
       propertyPath: jumpSound
       value: 
       objectReference: {fileID: 53675459}
+    - target: {fileID: 2866374146358341035, guid: b5a3737d7b5bf7d4a85a67392692fc75, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3228286773193085210, guid: b5a3737d7b5bf7d4a85a67392692fc75, type: 3}
       propertyPath: hitSound
       value: 
@@ -6674,10 +6687,6 @@ PrefabInstance:
     - target: {fileID: 7728099459630632071, guid: b5a3737d7b5bf7d4a85a67392692fc75, type: 3}
       propertyPath: m_Name
       value: Timmy
-      objectReference: {fileID: 0}
-    - target: {fileID: 7968610659990759797, guid: b5a3737d7b5bf7d4a85a67392692fc75, type: 3}
-      propertyPath: m_Interpolate
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
