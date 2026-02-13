@@ -24,10 +24,10 @@ public class PlayerMovement : MonoBehaviour
     [Header("Particle Setting")]
     public ParticleSystem particle;
 
-    [Header("Tap to Start")]
-    public Animator animator;
-    public bool isGameStarted;
-    public GameObject tapToStartBtn;
+    //[Header("Tap to Start")]
+    //public Animator animator;
+    //public bool isGameStarted;
+    //public GameObject tapToStartBtn;
 
     private bool jumpAllowed;
     private Rigidbody rb;
@@ -44,7 +44,7 @@ public class PlayerMovement : MonoBehaviour
 
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
-        animator = tapToStartBtn.GetComponent<Animator>();
+        //animator = tapToStartBtn.GetComponent<Animator>();
     }
 
     private void Update()
@@ -54,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(isGameStarted == true)
+        if(TaptoStart.instance.isGameStart)
         {
             anim.SetBool("IsRunning", true);
             transform.Translate(Vector3.forward * speed * Time.fixedDeltaTime);
@@ -139,11 +139,11 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    public void TapToStart()
-    {
-        isGameStarted = true;
-        tapToStartBtn.SetActive(false);
-    }
+    //public void TapToStart()
+    //{
+    //    isGameStarted = true;
+    //    tapToStartBtn.SetActive(false);
+    //}
 
     #region ButtonInput
     /*

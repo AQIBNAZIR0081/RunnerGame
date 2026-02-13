@@ -2019,6 +2019,78 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6402576566923414580, guid: b2321be1e7532e14cb503a31fcc7a4e9, type: 3}
   m_PrefabInstance: {fileID: 524555530}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &542159874
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 389300454310979718, guid: da7705c1f307f994ba1baba8138a7f68, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 389300454310979718, guid: da7705c1f307f994ba1baba8138a7f68, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.50562
+      objectReference: {fileID: 0}
+    - target: {fileID: 389300454310979718, guid: da7705c1f307f994ba1baba8138a7f68, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 76.40033
+      objectReference: {fileID: 0}
+    - target: {fileID: 389300454310979718, guid: da7705c1f307f994ba1baba8138a7f68, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 389300454310979718, guid: da7705c1f307f994ba1baba8138a7f68, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 389300454310979718, guid: da7705c1f307f994ba1baba8138a7f68, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 389300454310979718, guid: da7705c1f307f994ba1baba8138a7f68, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 389300454310979718, guid: da7705c1f307f994ba1baba8138a7f68, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 389300454310979718, guid: da7705c1f307f994ba1baba8138a7f68, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 389300454310979718, guid: da7705c1f307f994ba1baba8138a7f68, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2652968248152301081, guid: da7705c1f307f994ba1baba8138a7f68, type: 3}
+      propertyPath: m_Name
+      value: TaptoStart
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575463823512666310, guid: da7705c1f307f994ba1baba8138a7f68, type: 3}
+      propertyPath: tapToStartBtn
+      value: 
+      objectReference: {fileID: 1530398783}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: da7705c1f307f994ba1baba8138a7f68, type: 3}
+--- !u!114 &542159875 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8575463823512666310, guid: da7705c1f307f994ba1baba8138a7f68, type: 3}
+  m_PrefabInstance: {fileID: 542159874}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc7271de702c5394c959290b4e56596e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TaptoStart
 --- !u!1 &681241114
 GameObject:
   m_ObjectHideFlags: 0
@@ -4463,9 +4535,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5866666020847524195}
-        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
-        m_MethodName: TapToStart
+      - m_Target: {fileID: 542159875}
+        m_TargetAssemblyTypeName: TaptoStart, Assembly-CSharp
+        m_MethodName: GameStarted
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7007,3 +7079,4 @@ SceneRoots:
   - {fileID: 991444677}
   - {fileID: 1403384847}
   - {fileID: 410744956}
+  - {fileID: 542159874}
