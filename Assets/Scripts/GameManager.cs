@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class GameManager : MonoBehaviour
     public PlayerMovement playerMovement;
 
     private Animator losePanelAnimator;
+
 
     private void Awake()
     {
@@ -48,4 +50,8 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("MissionSelection");
     }
+    
+
+
+
 }

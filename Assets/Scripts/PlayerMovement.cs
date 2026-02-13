@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -23,6 +24,10 @@ public class PlayerMovement : MonoBehaviour
     [Header("Particle Setting")]
     public ParticleSystem particle;
 
+    [Header("Tap to Start")]
+    public Animator animator;
+    public bool isGameStarted;
+    public GameObject tapToStartBtn;
 
     private bool jumpAllowed;
     private Rigidbody rb;
@@ -35,10 +40,11 @@ public class PlayerMovement : MonoBehaviour
     //private bool isMovingRight = false;
 
     private void Start()
-    {   
+    {
+
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
-
+        animator = tapToStartBtn.GetComponent<Animator>();
     }
 
     private void Update()
@@ -48,17 +54,25 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        
-        anim.SetBool("IsRunning", true);
-        transform.Translate(Vector3.forward * speed * Time.fixedDeltaTime);
-
-        Jump();
-
-        if (rb.position.y < -0.3f)
+        if(isGameStarted == true)
         {
-            anim.SetBool("IsRunning", false);
-            GameManager.Instance.LoseGame();
+            anim.SetBool("IsRunning", true);
+            transform.Translate(Vector3.forward * speed * Time.fixedDeltaTime);
+
+            Jump();
+
+            if (rb.position.y < -0.3f)
+            {
+                anim.SetBool("IsRunning", false);
+                GameManager.Instance.LoseGame();
+            }
         }
+        else
+        {
+            anim.Play("Idle");
+        }
+
+
     }
 
     private void SwipController()
@@ -81,16 +95,16 @@ public class PlayerMovement : MonoBehaviour
 
                 Vector3 moveDirection = new Vector3(deltaPosition.x, 0, 0);
 
-                //if (transform.position.x > minClampPosition || transform.position.x < maxClampPosition)
-                //{
-                //    transform.position = new Vector3(
-                //        Mathf.Clamp(transform.position.x, minClampPosition, maxClampPosition),
-                //        transform.position.y,
-                //        transform.position.z
-                //    );
-                //}
+                if (transform.position.x > minClampPosition || transform.position.x < maxClampPosition)
+                {
+                    transform.position = new Vector3(
+                        Mathf.Clamp(transform.position.x, minClampPosition, maxClampPosition),
+                        transform.position.y,
+                        transform.position.z
+                    );
+                    transform.Translate(moveDirection * Time.deltaTime);
+                }
 
-                transform.Translate(moveDirection * Time.deltaTime);
             }
 
             // Touch Ended Phase
@@ -101,7 +115,7 @@ public class PlayerMovement : MonoBehaviour
                 Vector3 pointerYend = new Vector3(0, pointerEndPosition.y, 0);
                 Vector3 pointerYstart = new Vector3(0, pointerStartPosition.y, 0);
 
-                float swipDiffVerticle = ( pointerYend - pointerYstart).magnitude;
+                float swipDiffVerticle = (pointerYend - pointerYstart).magnitude;
 
                 if (pointerEndPosition.y > pointerStartPosition.y && swipDiffVerticle > swipDistanceY && rb.linearVelocity.y == 0)
                 {
@@ -123,6 +137,12 @@ public class PlayerMovement : MonoBehaviour
 
             jumpAllowed = false;
         }
+    }
+
+    public void TapToStart()
+    {
+        isGameStarted = true;
+        tapToStartBtn.SetActive(false);
     }
 
     #region ButtonInput
