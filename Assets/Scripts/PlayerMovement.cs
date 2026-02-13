@@ -81,7 +81,7 @@ public class PlayerMovement : MonoBehaviour
 
                 Vector3 moveDirection = new Vector3(deltaPosition.x, 0, 0);
 
-                //if (transform.position.x < minClampPosition || transform.position.x > maxClampPosition)
+                //if (transform.position.x > minClampPosition || transform.position.x < maxClampPosition)
                 //{
                 //    transform.position = new Vector3(
                 //        Mathf.Clamp(transform.position.x, minClampPosition, maxClampPosition),

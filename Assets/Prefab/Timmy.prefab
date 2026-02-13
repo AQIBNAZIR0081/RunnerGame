@@ -6936,10 +6936,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   speed: 10
   sidewaysSpeed: 10
-  swipDistanceY: 20
+  swipDistanceY: 50
   jumpForce: 8
-  minClampPosition: -4
-  maxClampPosition: 4
+  minClampPosition: -3.5
+  maxClampPosition: 3.5
   jumpSound: {fileID: 0}
   particle: {fileID: 4042793762873720558}
 --- !u!114 &3228286773193085210
