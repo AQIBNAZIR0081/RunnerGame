@@ -977,7 +977,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 50, y: 0.0000019073}
+  m_AnchoredPosition: {x: 50, y: 0.0000019073486}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &90269091
@@ -1061,7 +1061,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 90269091}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1460972573}
+        m_TargetAssemblyTypeName: ObjectSwitcher, Assembly-CSharp
+        m_MethodName: OnClickCubeButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &121456463
 GameObject:
   m_ObjectHideFlags: 0
@@ -1295,7 +1307,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 209920461}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1460972573}
+        m_TargetAssemblyTypeName: ObjectSwitcher, Assembly-CSharp
+        m_MethodName: OnClickCarButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &256234739
 GameObject:
   m_ObjectHideFlags: 0
@@ -3380,6 +3404,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1460972572
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1460972574}
+  - component: {fileID: 1460972573}
+  m_Layer: 0
+  m_Name: ObjectSwitcher
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1460972573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1460972572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4a8de42562fba54b8dea0628caffac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  _person: {fileID: 4631006919637459053}
+  _cube: {fileID: 886189325}
+  _car: {fileID: 645692923}
+--- !u!4 &1460972574
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1460972572}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1484726919
 GameObject:
   m_ObjectHideFlags: 0
@@ -3499,9 +3570,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
-        m_MethodName: Jump
+      - m_Target: {fileID: 1460972573}
+        m_TargetAssemblyTypeName: ObjectSwitcher, Assembly-CSharp
+        m_MethodName: OnClickPersonButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4180,9 +4251,17 @@ PrefabInstance:
       propertyPath: jumpSound
       value: 
       objectReference: {fileID: 53675459}
+    - target: {fileID: 1391138947837450538, guid: a926271d499f23143b3dfd1b774909fc, type: 3}
+      propertyPath: buttonsPanel
+      value: 
+      objectReference: {fileID: 2107119607}
     - target: {fileID: 3077150730017707569, guid: a926271d499f23143b3dfd1b774909fc, type: 3}
       propertyPath: m_Name
       value: Cube
+      objectReference: {fileID: 0}
+    - target: {fileID: 3077150730017707569, guid: a926271d499f23143b3dfd1b774909fc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5381685800338796050, guid: a926271d499f23143b3dfd1b774909fc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4635,7 +4714,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2107119608
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4655,7 +4734,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 88.3}
+  m_AnchoredPosition: {x: 0, y: 57.412964}
   m_SizeDelta: {x: 261.78616, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &197209370880176947
@@ -4910,6 +4989,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 552499427}
     - target: {fileID: 2866374146358341035, guid: b5a3737d7b5bf7d4a85a67392692fc75, type: 3}
+      propertyPath: buttonsPanel
+      value: 
+      objectReference: {fileID: 2107119607}
+    - target: {fileID: 2866374146358341035, guid: b5a3737d7b5bf7d4a85a67392692fc75, type: 3}
       propertyPath: runningSound
       value: 
       objectReference: {fileID: 1634366477}
@@ -4924,6 +5007,10 @@ PrefabInstance:
     - target: {fileID: 7728099459630632071, guid: b5a3737d7b5bf7d4a85a67392692fc75, type: 3}
       propertyPath: m_Name
       value: Timmy
+      objectReference: {fileID: 0}
+    - target: {fileID: 7728099459630632071, guid: b5a3737d7b5bf7d4a85a67392692fc75, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5004,6 +5091,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Car
       objectReference: {fileID: 0}
+    - target: {fileID: 201169735166039620, guid: 84ffb819cb4350f4086cc443f58a9698, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5174697442143438606, guid: 84ffb819cb4350f4086cc443f58a9698, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -5052,6 +5143,10 @@ PrefabInstance:
       propertyPath: jumpSound
       value: 
       objectReference: {fileID: 53675459}
+    - target: {fileID: 5881444871842262895, guid: 84ffb819cb4350f4086cc443f58a9698, type: 3}
+      propertyPath: buttonsPanel
+      value: 
+      objectReference: {fileID: 2107119607}
     - target: {fileID: 6306188364156643063, guid: 84ffb819cb4350f4086cc443f58a9698, type: 3}
       propertyPath: _camera
       value: 
@@ -5094,3 +5189,4 @@ SceneRoots:
   - {fileID: 410744956}
   - {fileID: 1114846382963196049}
   - {fileID: 300897035}
+  - {fileID: 1460972574}

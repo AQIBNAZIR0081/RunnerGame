@@ -27,6 +27,8 @@ public class PlayerMovement : MonoBehaviour
     [Header("Particle Setting")]
     public ParticleSystem particle;
 
+    [Header("Object Switcher")]
+    public GameObject buttonsPanel;
 
     private bool jumpAllowed;
     private Rigidbody rb;
@@ -57,6 +59,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if(TaptoStart.instance.isGameStart)
         {
+            buttonsPanel.SetActive(true);
+
             if(runningSound != null)
                 runningSound.Play();
 
@@ -80,6 +84,21 @@ public class PlayerMovement : MonoBehaviour
                 anim.Play("Idle");
         }
 
+    }
+
+    private void Jump()
+    {
+        if (jumpAllowed)
+        {
+            if(jumpSound != null) 
+                jumpSound.Play();
+            
+            particle.Play();
+            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            anim.SetTrigger("IsJumped");
+
+            jumpAllowed = false;
+        }
     }
 
     //private void SwipController()
@@ -132,22 +151,6 @@ public class PlayerMovement : MonoBehaviour
 
     //    }
     //}
-
-    private void Jump()
-    {
-        if (jumpAllowed)
-        {
-            if(jumpSound != null) 
-                jumpSound.Play();
-            
-            particle.Play();
-            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-            anim.SetTrigger("IsJumped");
-
-            jumpAllowed = false;
-        }
-    }
-
 
     #region ButtonInput
     /*
