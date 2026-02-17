@@ -21,17 +21,6 @@ public class CollisionDetection : MonoBehaviour
     }
 
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.gameObject.name == "DecalCube")
-        {
-            other.gameObject.SetActive(false);
-            gameObject.SetActive(false);
-            CharacterEnums.Cube.ToString();
-        }
-    }
-
-
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.CompareTag("Finish"))
