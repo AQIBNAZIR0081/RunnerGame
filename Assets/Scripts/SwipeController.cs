@@ -4,10 +4,16 @@ public class SwipeController : MonoBehaviour
 {
     public static SwipeController Instance;
 
-    public GameObject player;
+    [SerializeField]
+    private GameObject player;
+    [SerializeField]
+    private GameObject cube;
+    [SerializeField]
+    private GameObject car;
+
     //public float swipeThreshold = 20f;
-    public float disBetweenLines = 3f;
-    public float currentLine = 1f;
+    public int disBetweenLines = 3;
+    public int currentLine = 1;
     Vector2 pointStartPosition, pointEndPosition;
 
     void Awake()
@@ -17,6 +23,7 @@ public class SwipeController : MonoBehaviour
             Instance = this;
         }
     }
+
 
     public void TouchesInput()
     {
@@ -35,8 +42,6 @@ public class SwipeController : MonoBehaviour
 
                 float deltaLength = (pointEndPosition - pointStartPosition).magnitude;
 
-                Debug.Log("Delta: " + delta.x);
-                Debug.Log("Delta Length" + deltaLength);
 
                 // move right
                 if(delta.x > 0 && currentLine < 2)
@@ -62,4 +67,8 @@ public class SwipeController : MonoBehaviour
             }
         }
     }
+
+
+
+
 }

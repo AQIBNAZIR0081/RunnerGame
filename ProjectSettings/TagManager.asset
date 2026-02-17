@@ -7,6 +7,7 @@ TagManager:
   - Obstacle
   - SizeReducer
   - SizeIncreaser
+  - CubeDecal
   layers:
   - Default
   - TransparentFX

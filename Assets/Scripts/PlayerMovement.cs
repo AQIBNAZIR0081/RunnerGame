@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public CharacterEnums charEnums;
+
     [Header("Movement Settings")]
     public float speed = 10f;
     public float sidewaysSpeed = 10f;
@@ -24,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Particle Setting")]
     public ParticleSystem particle;
+
 
     private bool jumpAllowed;
     private Rigidbody rb;
@@ -54,7 +57,9 @@ public class PlayerMovement : MonoBehaviour
     {
         if(TaptoStart.instance.isGameStart)
         {
-            runningSound.Play();
+            if(runningSound != null)
+                runningSound.Play();
+    
             anim.SetBool("IsRunning", true);
             transform.Translate(Vector3.forward * speed * Time.fixedDeltaTime);
 

@@ -1,3 +1,4 @@
+using System.Drawing;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -19,6 +20,18 @@ public class CollisionDetection : MonoBehaviour
         currentHealth = healthSlider.value;
     }
 
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.name == "DecalCube")
+        {
+            other.gameObject.SetActive(false);
+            gameObject.SetActive(false);
+            CharacterEnums.Cube.ToString();
+        }
+    }
+
+
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.CompareTag("Finish"))
@@ -26,25 +39,15 @@ public class CollisionDetection : MonoBehaviour
             GameManager.Instance.WinGame();
         }
 
+        SizeReducer(other);
+        
+        SizeIncreaser(other);
 
-        // Decrease the scale of the player when it enters a "SizeReduction" trigger
-        if (other.gameObject.CompareTag("SizeReducer"))
-        {
-           
-            if (currentHealth > 0)
-            {
-                // Vibrate the device when the player trigger the SizeIncreasing trigger object.
-                Handheld.Vibrate();
-
-                // decrease the health of the player when it exit a "SizeReduction" trigger
-                ReduceHealth(scaleReductionAmount);
-
-            }
-
-            other.gameObject.SetActive(false);
-        }
+    }
 
 
+    private void SizeIncreaser(Collider other)
+    {
         // Increase the scale of the player when it enters a "SizeIncreasing" trigger
         if (other.gameObject.CompareTag("SizeIncreaser"))
         {
@@ -56,7 +59,27 @@ public class CollisionDetection : MonoBehaviour
 
                 // increase the health of the player when it exit a "SizeIncreasing" trigger
                 IncreaseHealth(scaleIncreasingAmount);
-                
+
+            }
+
+            other.gameObject.SetActive(false);
+        }
+    }
+
+    private void SizeReducer(Collider other)
+    {
+        // Decrease the scale of the player when it enters a "SizeReduction" trigger
+        if (other.gameObject.CompareTag("SizeReducer"))
+        {
+
+            if (currentHealth > 0)
+            {
+                // Vibrate the device when the player trigger the SizeIncreasing trigger object.
+                Handheld.Vibrate();
+
+                // decrease the health of the player when it exit a "SizeReduction" trigger
+                ReduceHealth(scaleReductionAmount);
+
             }
 
             other.gameObject.SetActive(false);
