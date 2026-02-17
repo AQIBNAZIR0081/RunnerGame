@@ -44,12 +44,14 @@ public class PlayerMovement : MonoBehaviour
 
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
-        //animator = tapToStartBtn.GetComponent<Animator>();
+        
     }
 
     private void Update()
     {
-        SwipController();
+        SwipeController.Instance.TouchesInput();
+
+        //SwipController();
     }
 
     private void FixedUpdate()
@@ -72,59 +74,58 @@ public class PlayerMovement : MonoBehaviour
             anim.Play("Idle");
         }
 
-
     }
 
-    private void SwipController()
-    {
-        if (Input.touchCount > 0)
-        {
-            Touch touch = Input.GetTouch(0);
+    //private void SwipController()
+    //{
+    //    if (Input.touchCount > 0)
+    //    {
+    //        Touch touch = Input.GetTouch(0);
 
-            // Touch Began Phase
-            if (touch.phase == TouchPhase.Began)
-            {
-                pointerStartPosition = touch.position;
-            }
+    //        // Touch Began Phase
+    //        if (touch.phase == TouchPhase.Began)
+    //        {
+    //            pointerStartPosition = touch.position;
+    //        }
 
 
-            // Touch Move or stationary Phase
-            if (touch.phase == TouchPhase.Moved || touch.phase == TouchPhase.Stationary)
-            {
-                deltaPosition = touch.deltaPosition;
+    //        // Touch Move or stationary Phase
+    //        if (touch.phase == TouchPhase.Moved || touch.phase == TouchPhase.Stationary)
+    //        {
+    //            deltaPosition = touch.deltaPosition;
 
-                Vector3 moveDirection = new Vector3(deltaPosition.x, 0, 0);
+    //            Vector3 moveDirection = new Vector3(deltaPosition.x, 0, 0);
 
-                if (transform.position.x > minClampPosition || transform.position.x < maxClampPosition)
-                {
-                    transform.position = new Vector3(
-                        Mathf.Clamp(transform.position.x, minClampPosition, maxClampPosition),
-                        transform.position.y,
-                        transform.position.z
-                    );
-                    transform.Translate(moveDirection * Time.deltaTime);
-                }
+    //            if (transform.position.x > minClampPosition || transform.position.x < maxClampPosition)
+    //            {
+    //                transform.position = new Vector3(
+    //                    Mathf.Clamp(transform.position.x, minClampPosition, maxClampPosition),
+    //                    transform.position.y,
+    //                    transform.position.z
+    //                );
+    //                transform.Translate(moveDirection * Time.deltaTime);
+    //            }
 
-            }
+    //        }
 
-            // Touch Ended Phase
-            if (touch.phase == TouchPhase.Ended)
-            {
-                pointerEndPosition = touch.position;
+    //        // Touch Ended Phase
+    //        if (touch.phase == TouchPhase.Ended)
+    //        {
+    //            pointerEndPosition = touch.position;
 
-                Vector3 pointerYend = new Vector3(0, pointerEndPosition.y, 0);
-                Vector3 pointerYstart = new Vector3(0, pointerStartPosition.y, 0);
+    //            Vector3 pointerYend = new Vector3(0, pointerEndPosition.y, 0);
+    //            Vector3 pointerYstart = new Vector3(0, pointerStartPosition.y, 0);
 
-                float swipDiffVerticle = (pointerYend - pointerYstart).magnitude;
+    //            float swipDiffVerticle = (pointerYend - pointerYstart).magnitude;
 
-                if (pointerEndPosition.y > pointerStartPosition.y && swipDiffVerticle > swipDistanceY && rb.linearVelocity.y == 0)
-                {
-                    jumpAllowed = true;
-                }
-            }
+    //            if (pointerEndPosition.y > pointerStartPosition.y && swipDiffVerticle > swipDistanceY && rb.linearVelocity.y == 0)
+    //            {
+    //                jumpAllowed = true;
+    //            }
+    //        }
 
-        }
-    }
+    //    }
+    //}
 
     private void Jump()
     {
@@ -139,11 +140,6 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    //public void TapToStart()
-    //{
-    //    isGameStarted = true;
-    //    tapToStartBtn.SetActive(false);
-    //}
 
     #region ButtonInput
     /*
