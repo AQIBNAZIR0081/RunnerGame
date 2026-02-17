@@ -6827,13 +6827,14 @@ GameObject:
   - component: {fileID: 7968610659990759797}
   - component: {fileID: 2866374146358341035}
   - component: {fileID: 3228286773193085210}
+  - component: {fileID: 458765946438619006}
   m_Layer: 0
   m_Name: Timmy
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &986230524236465206
 Transform:
   m_ObjectHideFlags: 0
@@ -6934,6 +6935,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72c1dadfe8fdcf84a839d717850e238f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
+  charEnums: 0
   speed: 8
   sidewaysSpeed: 10
   swipDistanceY: 80
@@ -6941,10 +6943,8 @@ MonoBehaviour:
   minClampPosition: -3.5
   maxClampPosition: 3.5
   jumpSound: {fileID: 0}
+  runningSound: {fileID: 0}
   particle: {fileID: 4042793762873720558}
-  animator: {fileID: 0}
-  isGameStarted: 0
-  tapToStartBtn: {fileID: 0}
 --- !u!114 &3228286773193085210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6962,6 +6962,20 @@ MonoBehaviour:
   scaleReductionAmount: 0.2
   scaleIncreasingAmount: 0.2
   currentHealth: 0
+--- !u!114 &458765946438619006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7728099459630632071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67e84ac939697994092c42d3a735fde4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FollowCamera
+  _camera: {fileID: 0}
+  offset: {x: 0, y: 3.5, z: -8}
 --- !u!1 &7744010320051933148
 GameObject:
   m_ObjectHideFlags: 0

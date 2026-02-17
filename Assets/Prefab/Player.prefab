@@ -4909,13 +4909,14 @@ GameObject:
   - component: {fileID: 1838994416846904264}
   - component: {fileID: 1391138947837450538}
   - component: {fileID: 1289462044895844170}
+  - component: {fileID: 561925779708485886}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5381685800338796050
 Transform:
   m_ObjectHideFlags: 0
@@ -5049,6 +5050,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72c1dadfe8fdcf84a839d717850e238f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
+  charEnums: 1
   speed: 10
   sidewaysSpeed: 10
   swipDistanceY: 80
@@ -5056,6 +5058,7 @@ MonoBehaviour:
   minClampPosition: -3.5
   maxClampPosition: 3
   jumpSound: {fileID: 0}
+  runningSound: {fileID: 0}
   particle: {fileID: 1814707054016027645}
 --- !u!114 &1289462044895844170
 MonoBehaviour:
@@ -5074,3 +5077,17 @@ MonoBehaviour:
   scaleReductionAmount: 0.2
   scaleIncreasingAmount: 0.2
   currentHealth: 0
+--- !u!114 &561925779708485886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3077150730017707569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67e84ac939697994092c42d3a735fde4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FollowCamera
+  _camera: {fileID: 0}
+  offset: {x: 0, y: 3.5, z: -8}

@@ -4,17 +4,14 @@ public class SwipeController : MonoBehaviour
 {
     public static SwipeController Instance;
 
-    [SerializeField]
-    private GameObject player;
-    [SerializeField]
-    private GameObject cube;
-    [SerializeField]
-    private GameObject car;
-
-    //public float swipeThreshold = 20f;
+    public float swipeThreshold = 20f;
     public int disBetweenLines = 3;
     public int currentLine = 1;
-    Vector2 pointStartPosition, pointEndPosition;
+    public bool allowJumpToObject;
+    
+    
+    private Vector2 pointStartPosition, pointEndPosition;
+
 
     void Awake()
     {
@@ -24,8 +21,7 @@ public class SwipeController : MonoBehaviour
         }
     }
 
-
-    public void TouchesInput()
+    public void TouchesInput(GameObject activeObject)
     {
         if (Input.touchCount > 0)
         {
@@ -46,16 +42,16 @@ public class SwipeController : MonoBehaviour
                 // move right
                 if(delta.x > 0 && currentLine < 2)
                 {
-                    player.transform.position = new Vector3(player.transform.position.x + disBetweenLines, player.transform.position.y, player.transform.position.z);
-                    currentLine++;
+                    activeObject.transform.position = new Vector3(activeObject.transform.position.x + disBetweenLines, activeObject.transform.position.y, activeObject.transform.position.z);
+                    currentLine += 1;
 
                     Debug.Log("CurrentLine: " + currentLine);
                 }
 
-                if(delta.x < 0 && currentLine > 0)
+                else if(delta.x < 0 && currentLine > 0)
                 {
-                    player.transform.position = new Vector3(player.transform.position.x - disBetweenLines, player.transform.position.y, player.transform.position.z);
-                    currentLine--;
+                    activeObject.transform.position = new Vector3(activeObject.transform.position.x - disBetweenLines, activeObject.transform.position.y, activeObject.transform.position.z);
+                    currentLine -= 1;
 
                     Debug.Log("CurrentLine: " + currentLine);
                 }
@@ -64,6 +60,17 @@ public class SwipeController : MonoBehaviour
             if (touch.phase == TouchPhase.Ended)
             {
                 pointEndPosition = touch.position;
+
+                Vector2 pointerYend = new Vector2(0, pointEndPosition.y);
+                Vector2 pointerYstart = new Vector2(0, pointStartPosition.y);
+
+                float swipDiffVerticle = (pointerYend - pointerYstart).magnitude;
+
+                if (pointEndPosition.y > pointStartPosition.y && swipDiffVerticle > swipeThreshold)
+                {
+                    allowJumpToObject = true;
+                }
+
             }
         }
     }
