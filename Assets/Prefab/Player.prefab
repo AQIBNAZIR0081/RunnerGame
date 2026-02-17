@@ -5051,11 +5051,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   speed: 10
   sidewaysSpeed: 10
-  swipeDistance: 1000
-  playerRigidbody: {fileID: 0}
-  jumpForce: 12
-  minClampPosition: -4
-  maxClampPosition: 4
+  swipDistanceY: 80
+  jumpForce: 8
+  minClampPosition: -3.5
+  maxClampPosition: 3
   jumpSound: {fileID: 0}
   particle: {fileID: 1814707054016027645}
 --- !u!114 &1289462044895844170

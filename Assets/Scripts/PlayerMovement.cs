@@ -24,11 +24,6 @@ public class PlayerMovement : MonoBehaviour
     [Header("Particle Setting")]
     public ParticleSystem particle;
 
-    //[Header("Tap to Start")]
-    //public Animator animator;
-    //public bool isGameStarted;
-    //public GameObject tapToStartBtn;
-
     private bool jumpAllowed;
     private Rigidbody rb;
     private Animator anim;
@@ -49,9 +44,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        SwipeController.Instance.TouchesInput();
+        //SwipeController.Instance.TouchesInput();
 
-        //SwipController();
+        SwipController();
     }
 
     private void FixedUpdate()
@@ -76,56 +71,56 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    //private void SwipController()
-    //{
-    //    if (Input.touchCount > 0)
-    //    {
-    //        Touch touch = Input.GetTouch(0);
+    private void SwipController()
+    {
+        if (Input.touchCount > 0)
+        {
+            Touch touch = Input.GetTouch(0);
 
-    //        // Touch Began Phase
-    //        if (touch.phase == TouchPhase.Began)
-    //        {
-    //            pointerStartPosition = touch.position;
-    //        }
+            // Touch Began Phase
+            if (touch.phase == TouchPhase.Began)
+            {
+                pointerStartPosition = touch.position;
+            }
 
 
-    //        // Touch Move or stationary Phase
-    //        if (touch.phase == TouchPhase.Moved || touch.phase == TouchPhase.Stationary)
-    //        {
-    //            deltaPosition = touch.deltaPosition;
+            // Touch Move or stationary Phase
+            if (touch.phase == TouchPhase.Moved || touch.phase == TouchPhase.Stationary)
+            {
+                deltaPosition = touch.deltaPosition;
 
-    //            Vector3 moveDirection = new Vector3(deltaPosition.x, 0, 0);
+                Vector3 moveDirection = new Vector3(deltaPosition.x, 0, 0);
 
-    //            if (transform.position.x > minClampPosition || transform.position.x < maxClampPosition)
-    //            {
-    //                transform.position = new Vector3(
-    //                    Mathf.Clamp(transform.position.x, minClampPosition, maxClampPosition),
-    //                    transform.position.y,
-    //                    transform.position.z
-    //                );
-    //                transform.Translate(moveDirection * Time.deltaTime);
-    //            }
+                if (transform.position.x > minClampPosition || transform.position.x < maxClampPosition)
+                {
+                    transform.position = new Vector3(
+                        Mathf.Clamp(transform.position.x, minClampPosition, maxClampPosition),
+                        transform.position.y,
+                        transform.position.z
+                    );
+                    transform.Translate(moveDirection * Time.deltaTime);
+                }
 
-    //        }
+            }
 
-    //        // Touch Ended Phase
-    //        if (touch.phase == TouchPhase.Ended)
-    //        {
-    //            pointerEndPosition = touch.position;
+            // Touch Ended Phase
+            if (touch.phase == TouchPhase.Ended)
+            {
+                pointerEndPosition = touch.position;
 
-    //            Vector3 pointerYend = new Vector3(0, pointerEndPosition.y, 0);
-    //            Vector3 pointerYstart = new Vector3(0, pointerStartPosition.y, 0);
+                Vector3 pointerYend = new Vector3(0, pointerEndPosition.y, 0);
+                Vector3 pointerYstart = new Vector3(0, pointerStartPosition.y, 0);
 
-    //            float swipDiffVerticle = (pointerYend - pointerYstart).magnitude;
+                float swipDiffVerticle = (pointerYend - pointerYstart).magnitude;
 
-    //            if (pointerEndPosition.y > pointerStartPosition.y && swipDiffVerticle > swipDistanceY && rb.linearVelocity.y == 0)
-    //            {
-    //                jumpAllowed = true;
-    //            }
-    //        }
+                if (pointerEndPosition.y > pointerStartPosition.y && swipDiffVerticle > swipDistanceY && rb.linearVelocity.y == 0)
+                {
+                    jumpAllowed = true;
+                }
+            }
 
-    //    }
-    //}
+        }
+    }
 
     private void Jump()
     {
