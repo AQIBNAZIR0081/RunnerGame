@@ -20,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Audio Setting")]
     public AudioSource jumpSound;
+    public AudioSource runningSound;
 
     [Header("Particle Setting")]
     public ParticleSystem particle;
@@ -53,6 +54,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if(TaptoStart.instance.isGameStart)
         {
+            runningSound.Play();
             anim.SetBool("IsRunning", true);
             transform.Translate(Vector3.forward * speed * Time.fixedDeltaTime);
 
@@ -126,7 +128,9 @@ public class PlayerMovement : MonoBehaviour
     {
         if (jumpAllowed)
         {
-            jumpSound.Play();
+            if(jumpSound != null) 
+                jumpSound.Play();
+            
             particle.Play();
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             anim.SetTrigger("IsJumped");
