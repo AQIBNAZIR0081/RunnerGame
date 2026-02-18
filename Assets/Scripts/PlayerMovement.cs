@@ -56,10 +56,9 @@ public class PlayerMovement : MonoBehaviour
         {
             buttonsPanel.SetActive(true);
 
-            //if (runningSound != null && charEnums == CharacterEnums.Person)
-            //{
-            //    runningSound.Play();
-            //}
+            if (runningSound != null)
+                runningSound.Play();
+            
 
             if (anim != null && charEnums == CharacterEnums.Person)
                 anim.SetBool("IsRunning", true);

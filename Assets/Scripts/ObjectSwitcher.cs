@@ -15,6 +15,9 @@ public class ObjectSwitcher : MonoBehaviour
         _person.SetActive(true);
         _cube.SetActive(false);
         _car.SetActive(false);
+
+        SwipeController.Instance.currentLine = 1;
+        Debug.Log("DesiredLine after Switch: " + SwipeController.Instance.currentLine);
     }
 
     public void OnClickCubeButton()
@@ -22,6 +25,9 @@ public class ObjectSwitcher : MonoBehaviour
         _person.SetActive(false);
         _cube.SetActive(true);
         _car.SetActive(false);
+
+        SwipeController.Instance.currentLine = 1;
+        Debug.Log("DesiredLine after Switch: " + SwipeController.Instance.currentLine);
     }
 
     public void OnClickCarButton()
@@ -29,5 +35,8 @@ public class ObjectSwitcher : MonoBehaviour
         _person.SetActive(false);
         _cube.SetActive(false);
         _car.SetActive(true);
+
+        SwipeController.Instance.currentLine = 1;
+        Debug.Log("DesiredLine after Switch: " + SwipeController.Instance.currentLine);
     }
 }
