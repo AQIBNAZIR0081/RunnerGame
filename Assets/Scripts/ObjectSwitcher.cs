@@ -3,40 +3,45 @@ using UnityEngine;
 public class ObjectSwitcher : MonoBehaviour
 {
     [SerializeField]
-    private GameObject _person;
-    [SerializeField]
-    private GameObject _cube;
-    [SerializeField]
-    private GameObject _car;
+    private GameObject[] characterContainer;
 
-    
+    private GameObject previousActiveObject;
+
+    private void SwitchObjectCheck()
+    {
+        for (int i = 0; i < characterContainer.Length; i++)
+        {
+
+            if (characterContainer[i].activeInHierarchy)
+            {
+                previousActiveObject = characterContainer[i];
+                previousActiveObject.SetActive(false);
+            }
+        }
+    }
+
+
     public void OnClickPersonButton()
     {
-        _person.SetActive(true);
-        _cube.SetActive(false);
-        _car.SetActive(false);
-
-        SwipeController.Instance.currentLine = 1;
-        Debug.Log("DesiredLine after Switch: " + SwipeController.Instance.currentLine);
+        SwitchObjectCheck();
+        ActivateObject(0);
     }
 
     public void OnClickCubeButton()
     {
-        _person.SetActive(false);
-        _cube.SetActive(true);
-        _car.SetActive(false);
-
-        SwipeController.Instance.currentLine = 1;
-        Debug.Log("DesiredLine after Switch: " + SwipeController.Instance.currentLine);
+        SwitchObjectCheck();
+        ActivateObject(1);
     }
 
     public void OnClickCarButton()
     {
-        _person.SetActive(false);
-        _cube.SetActive(false);
-        _car.SetActive(true);
+        SwitchObjectCheck();
+        ActivateObject(2);
+    }
 
-        SwipeController.Instance.currentLine = 1;
-        Debug.Log("DesiredLine after Switch: " + SwipeController.Instance.currentLine);
+    private void ActivateObject(int activeObjectIndex)
+    {
+        characterContainer[activeObjectIndex].transform.position = previousActiveObject.transform.position;
+        characterContainer[activeObjectIndex].SetActive(true);
     }
 }

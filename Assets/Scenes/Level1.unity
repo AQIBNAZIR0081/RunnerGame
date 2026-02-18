@@ -3416,9 +3416,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4a8de42562fba54b8dea0628caffac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  _person: {fileID: 4631006919637459053}
-  _cube: {fileID: 886189325}
-  _car: {fileID: 645692923}
+  characterContainer:
+  - {fileID: 4631006919637459053}
+  - {fileID: 886189325}
+  - {fileID: 645692923}
 --- !u!4 &1460972574
 Transform:
   m_ObjectHideFlags: 0
@@ -4862,6 +4863,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Timmy
       objectReference: {fileID: 0}
+    - target: {fileID: 7728099459630632071, guid: b5a3737d7b5bf7d4a85a67392692fc75, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4948,7 +4953,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 201169735166039620, guid: 84ffb819cb4350f4086cc443f58a9698, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 201169735166039620, guid: 84ffb819cb4350f4086cc443f58a9698, type: 3}
       propertyPath: m_TagString
