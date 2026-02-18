@@ -15,11 +15,6 @@ public class PlayerMovement : MonoBehaviour
     [Header("Jump Settings")]
     public float jumpForce = 5f;
 
-    [Space]
-    [Header("Clamping Setting")]
-    public float minClampPosition = -3f;
-    public float maxClampPosition = 3f;
-
     [Header("Audio Setting")]
     public AudioSource jumpSound;
     public AudioSource runningSound;
@@ -61,10 +56,12 @@ public class PlayerMovement : MonoBehaviour
         {
             buttonsPanel.SetActive(true);
 
-            if(runningSound != null)
-                runningSound.Play();
+            //if (runningSound != null && charEnums == CharacterEnums.Person)
+            //{
+            //    runningSound.Play();
+            //}
 
-            if (anim != null)
+            if (anim != null && charEnums == CharacterEnums.Person)
                 anim.SetBool("IsRunning", true);
 
             transform.Translate(Vector3.forward * speed * Time.fixedDeltaTime);
@@ -73,7 +70,7 @@ public class PlayerMovement : MonoBehaviour
 
             if (rb.position.y < -0.3f)
             {
-                if (anim != null)
+                if (anim != null && charEnums == CharacterEnums.Person)
                     anim.SetBool("IsRunning", false);
                 GameManager.Instance.LoseGame();
             }

@@ -44,7 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df529f89f82af9749bd6eae8d1ef6ef5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SwipeController
-  player: {fileID: 0}
   swipeThreshold: 100
   disBetweenLines: 3
   currentLine: 1
