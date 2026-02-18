@@ -6828,14 +6828,14 @@ GameObject:
   - component: {fileID: 2866374146358341035}
   - component: {fileID: 3228286773193085210}
   - component: {fileID: 458765946438619006}
-  - component: {fileID: 957016699580026045}
+  - component: {fileID: 5802701214100087716}
   m_Layer: 0
   m_Name: Timmy
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &986230524236465206
 Transform:
   m_ObjectHideFlags: 0
@@ -6942,7 +6942,7 @@ MonoBehaviour:
   swipDistanceY: 80
   jumpForce: 5
   jumpSound: {fileID: 0}
-  runningSound: {fileID: 0}
+  runningSound: {fileID: 5802701214100087716}
   particle: {fileID: 4042793762873720558}
   buttonsPanel: {fileID: 0}
 --- !u!114 &3228286773193085210
@@ -6976,7 +6976,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FollowCamera
   _camera: {fileID: 0}
   offset: {x: 0, y: 3.5, z: -8}
---- !u!82 &957016699580026045
+--- !u!82 &5802701214100087716
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6988,17 +6988,17 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 924a7a78a48f451449823684c6a0cc58, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 1.01
+  MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
