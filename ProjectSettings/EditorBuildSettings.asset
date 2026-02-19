@@ -6,16 +6,16 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/LoadingBar.unity
+    path: Assets/_Project/Scenes/LoadingBar.unity
     guid: 8d67007c018a598418c8431d8ceac15e
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
+    path: Assets/_Project/Scenes/MainMenu.unity
     guid: dd413b50c780e8d43854b82efa0481bc
   - enabled: 1
-    path: Assets/Scenes/MissionSelection.unity
+    path: Assets/_Project/Scenes/MissionSelection.unity
     guid: b87e2d4da506ec548a5392d05e23791e
   - enabled: 1
-    path: Assets/Scenes/Level1.unity
+    path: Assets/_Project/Scenes/Level1.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
     path: Assets/Scenes/Level2.unity
