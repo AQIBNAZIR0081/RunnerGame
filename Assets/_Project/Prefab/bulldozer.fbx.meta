@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5978df5ffa61953469dfa0034626440a
+guid: 54165c6131a71fb46a01f94c750b0866
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
@@ -7,63 +7,68 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material.001
-    second: {fileID: 2100000, guid: 4d32e5b5a76be5c4487d8ecb3152e121, type: 2}
+      name: Black Part
+    second: {fileID: 2100000, guid: 5e844f34c8bb85840b2c6fe075a5660e, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material.002
-    second: {fileID: 2100000, guid: 5e5d5edd933c47c4585de0ad8f8cad82, type: 2}
+      name: Car Paint 2
+    second: {fileID: 2100000, guid: 3f5c2bbfdff80e34aa6a71a15a38ff5b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material.003
-    second: {fileID: 2100000, guid: 428b3b7061b1c1249be2232d6c025543, type: 2}
+      name: Dark Glass 2
+    second: {fileID: 2100000, guid: 3b0eca89fdab50e4d8ef5656c31f5e76, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material.004
-    second: {fileID: 2100000, guid: 3f696f786e39d3c448878293ff783d07, type: 2}
+      name: Exhaust
+    second: {fileID: 2100000, guid: b41adfab5acf5d448a2bdcfc0521c33f, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material.005
-    second: {fileID: 2100000, guid: a1f0b8fa0cf1f2346b11a892f6dc09d5, type: 2}
+      name: Front Shell
+    second: {fileID: 2100000, guid: eff3d3aaf5003774195d2d0d9cfd23e4, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material.006
-    second: {fileID: 2100000, guid: 76aa52b1e75779744af8daf42ed7b956, type: 2}
+      name: LED Red
+    second: {fileID: 2100000, guid: d1c2f10dfa222ab4999f8db09b112f3f, type: 2}
   - first:
-      type: UnityEngine:Texture2D
+      type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Road 1
-    second: {fileID: 2800000, guid: 544869177c85a8c4c8e013e0ba43fc1a, type: 3}
+      name: Leather Black
+    second: {fileID: 2100000, guid: d6c6808b93de2b34cbd11f2c123a27f3, type: 2}
   - first:
-      type: UnityEngine:Texture2D
+      type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Road 2
-    second: {fileID: 2800000, guid: 42f922eda6f37144b92d29622f305129, type: 3}
+      name: Light Bright
+    second: {fileID: 2100000, guid: 5750079df00f2f34fa719defc2242673, type: 2}
   - first:
-      type: UnityEngine:Texture2D
+      type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Road 3
-    second: {fileID: 2800000, guid: b3216e648217e5e4791fd3119c437c62, type: 3}
+      name: Metal Plate
+    second: {fileID: 2100000, guid: 0f9587fea7414d74ebe1c8cb2779a941, type: 2}
   - first:
-      type: UnityEngine:Texture2D
+      type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Road 4
-    second: {fileID: 2800000, guid: 3514c3125e9b650498b75634a57045ea, type: 3}
+      name: MetalBlack
+    second: {fileID: 2100000, guid: 78e1fae9b49369d4bbfdb216e6ce75c8, type: 2}
   - first:
-      type: UnityEngine:Texture2D
+      type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Road 5
-    second: {fileID: 2800000, guid: 011b79a189153974a8bd4e1501c73935, type: 3}
+      name: PlateNumver_.1
+    second: {fileID: 2100000, guid: e7ef141aecb7d81439ccb02d2a8205e4, type: 2}
   - first:
-      type: UnityEngine:Texture2D
+      type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Road 6
-    second: {fileID: 2800000, guid: 12a7c3938409b4e4d830f7c12e8e7832, type: 3}
+      name: Red light cover
+    second: {fileID: 2100000, guid: b80c3472f7b35e948b513031d305af32, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Steel
+    second: {fileID: 2100000, guid: de2b65dda2a999a438ead7b89c1cb4db, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

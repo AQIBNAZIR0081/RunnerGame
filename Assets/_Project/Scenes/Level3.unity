@@ -4873,11 +4873,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6221021443629402389, guid: a6630ca08ea4394489d643901192f454, type: 3}
   m_PrefabInstance: {fileID: 874611704}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &886189325 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8841203748733912227, guid: 1e689307ff5008447a7d67affa224438, type: 3}
-  m_PrefabInstance: {fileID: 1869427510135419289}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &891056320
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5653,6 +5648,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6221021443629402389, guid: a6630ca08ea4394489d643901192f454, type: 3}
   m_PrefabInstance: {fileID: 1014201752}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1030522651
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 5978df5ffa61953469dfa0034626440a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.4446135
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5978df5ffa61953469dfa0034626440a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0049653794
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5978df5ffa61953469dfa0034626440a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.274162
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5978df5ffa61953469dfa0034626440a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5978df5ffa61953469dfa0034626440a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5978df5ffa61953469dfa0034626440a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5978df5ffa61953469dfa0034626440a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5978df5ffa61953469dfa0034626440a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5978df5ffa61953469dfa0034626440a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5978df5ffa61953469dfa0034626440a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5978df5ffa61953469dfa0034626440a, type: 3}
+      propertyPath: m_Name
+      value: Low Road v_2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5978df5ffa61953469dfa0034626440a, type: 3}
 --- !u!1001 &1053481688
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10033,7 +10085,7 @@ PrefabInstance:
     - target: {fileID: 7343582241740378486, guid: 277696a4c1f7e8e4d855c075c6852c94, type: 3}
       propertyPath: 'characterContainer.Array.data[1]'
       value: 
-      objectReference: {fileID: 886189325}
+      objectReference: {fileID: 0}
     - target: {fileID: 7343582241740378486, guid: 277696a4c1f7e8e4d855c075c6852c94, type: 3}
       propertyPath: 'characterContainer.Array.data[2]'
       value: 
@@ -10156,6 +10208,10 @@ PrefabInstance:
     - target: {fileID: 6473835141619287276, guid: 1e689307ff5008447a7d67affa224438, type: 3}
       propertyPath: m_Name
       value: CharacterContainer
+      objectReference: {fileID: 0}
+    - target: {fileID: 6866149145836349323, guid: 1e689307ff5008447a7d67affa224438, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7000748998118851095, guid: 1e689307ff5008447a7d67affa224438, type: 3}
       propertyPath: jumpSound
@@ -10371,3 +10427,4 @@ SceneRoots:
   - {fileID: 1114846382963196049}
   - {fileID: 300897035}
   - {fileID: 644005613323440775}
+  - {fileID: 1030522651}
