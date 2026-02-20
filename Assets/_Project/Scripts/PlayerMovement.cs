@@ -45,7 +45,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        SwipeController.Instance.TouchesInput(transform.gameObject);
+        if (TaptoStart.instance.isGameStart)
+        {
+            SwipeController.Instance.TouchesInput(transform.gameObject);
+        }
 
         //SwipController();
     }
