@@ -10,10 +10,12 @@ public class SwipeController : MonoBehaviour
     public float swipeThreshold = 20f;
     public float disBetweenLines = 3;
     public int currentLine = 1;
-    
+
     // Private Fields
     private bool ispressing;
+    private Vector3 targetPosition;
     private Vector2 pointStartPosition, pointEndPosition;
+
 
     void Awake()
     {
@@ -65,9 +67,10 @@ public class SwipeController : MonoBehaviour
 
                     // set the active Object position to the right by line distance
                     activeObject.transform.position = new Vector3(initialPosition.x + disBetweenLines, initialPosition.y, initialPosition.z);
-
+                    
                     // increase the currentLine by 1
                     currentLine += 1;
+
                     ispressing = true;
 
                 }
@@ -82,6 +85,7 @@ public class SwipeController : MonoBehaviour
 
                     // decrease the currentLine by 1
                     currentLine -= 1;
+
                     ispressing = true;
 
                 }

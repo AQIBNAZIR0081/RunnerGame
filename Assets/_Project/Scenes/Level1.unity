@@ -2495,6 +2495,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SwipeController
       objectReference: {fileID: 0}
+    - target: {fileID: 8108235258388717922, guid: 172caf28c315e75448e31fbf76ef143f, type: 3}
+      propertyPath: smoothness
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 8603135738048617421, guid: 172caf28c315e75448e31fbf76ef143f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
