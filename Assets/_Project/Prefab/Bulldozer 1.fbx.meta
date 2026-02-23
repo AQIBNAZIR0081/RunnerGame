@@ -1,74 +1,9 @@
 fileFormatVersion: 2
-guid: 54165c6131a71fb46a01f94c750b0866
+guid: a3d98a0553db2d440a1cda2296cad134
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Black Part
-    second: {fileID: 2100000, guid: 5e844f34c8bb85840b2c6fe075a5660e, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Car Paint 2
-    second: {fileID: 2100000, guid: 3f5c2bbfdff80e34aa6a71a15a38ff5b, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Dark Glass 2
-    second: {fileID: 2100000, guid: 3b0eca89fdab50e4d8ef5656c31f5e76, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Exhaust
-    second: {fileID: 2100000, guid: b41adfab5acf5d448a2bdcfc0521c33f, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Front Shell
-    second: {fileID: 2100000, guid: eff3d3aaf5003774195d2d0d9cfd23e4, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: LED Red
-    second: {fileID: 2100000, guid: d1c2f10dfa222ab4999f8db09b112f3f, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Leather Black
-    second: {fileID: 2100000, guid: d6c6808b93de2b34cbd11f2c123a27f3, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Light Bright
-    second: {fileID: 2100000, guid: 5750079df00f2f34fa719defc2242673, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Metal Plate
-    second: {fileID: 2100000, guid: 0f9587fea7414d74ebe1c8cb2779a941, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: MetalBlack
-    second: {fileID: 2100000, guid: 78e1fae9b49369d4bbfdb216e6ce75c8, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: PlateNumver_.1
-    second: {fileID: 2100000, guid: e7ef141aecb7d81439ccb02d2a8205e4, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Red light cover
-    second: {fileID: 2100000, guid: b80c3472f7b35e948b513031d305af32, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Steel
-    second: {fileID: 2100000, guid: de2b65dda2a999a438ead7b89c1cb4db, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
