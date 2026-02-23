@@ -61,8 +61,10 @@ public class SwipeController : MonoBehaviour
                 if (delta.x > 0 && deltaLength > swipeThreshold && currentLine < 2)
                 {
 
+                    Vector3 initialPosition = activeObject.transform.position;
+
                     // set the active Object position to the right by line distance
-                    activeObject.transform.position = new Vector3(activeObject.transform.position.x + disBetweenLines, activeObject.transform.position.y, activeObject.transform.position.z);
+                    activeObject.transform.position = new Vector3(initialPosition.x + disBetweenLines, initialPosition.y, initialPosition.z);
 
                     // increase the currentLine by 1
                     currentLine += 1;
@@ -73,8 +75,10 @@ public class SwipeController : MonoBehaviour
                 // check if the delta length is greater then swipeThreshold and finger is moving on screen in -ve x-axis direction
                 else if (delta.x < 0 && deltaLength > swipeThreshold && currentLine > 0)
                 {
+                    Vector3 initialPosition = activeObject.transform.position;
+
                     // set the active Object position to the left by line distance
-                    activeObject.transform.position = new Vector3(activeObject.transform.position.x - disBetweenLines, activeObject.transform.position.y, activeObject.transform.position.z);
+                    activeObject.transform.position = new Vector3(initialPosition.x - disBetweenLines, initialPosition.y, initialPosition.z);
 
                     // decrease the currentLine by 1
                     currentLine -= 1;
