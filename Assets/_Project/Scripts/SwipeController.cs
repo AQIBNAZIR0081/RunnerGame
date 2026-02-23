@@ -15,7 +15,6 @@ public class SwipeController : MonoBehaviour
     private bool ispressing;
     private Vector2 pointStartPosition, pointEndPosition;
 
-
     void Awake()
     {
         if(Instance == null)
@@ -23,7 +22,6 @@ public class SwipeController : MonoBehaviour
             Instance = this;
         }
     }
-
 
     // TouchInput Method for each player GameObject present in game
     public void TouchesInput(GameObject activeObject)
@@ -58,7 +56,6 @@ public class SwipeController : MonoBehaviour
                 // get the x-axis delta Length difference of start and end position of screen pointer
                 float deltaLength = (deltaXend - deltaXstart).magnitude;
 
-                Debug.Log("CurrentLine: update " + currentLine);
 
                 // check if the delta length is greater then swipeThreshold and finger is moving on screen in x-axis direction
                 if (delta.x > 0 && deltaLength > swipeThreshold && currentLine < 2)
@@ -71,7 +68,6 @@ public class SwipeController : MonoBehaviour
                     currentLine += 1;
                     ispressing = true;
 
-                    Debug.Log("CurrentLine Right: " + currentLine);
                 }
 
                 // check if the delta length is greater then swipeThreshold and finger is moving on screen in -ve x-axis direction
@@ -84,7 +80,6 @@ public class SwipeController : MonoBehaviour
                     currentLine -= 1;
                     ispressing = true;
 
-                    Debug.Log("CurrentLine LEFT: " + currentLine);
                 }
             }
 

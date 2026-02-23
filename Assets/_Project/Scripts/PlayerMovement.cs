@@ -6,18 +6,17 @@ public class PlayerMovement : MonoBehaviour
 {
     public CharacterEnums charEnums;
 
+    [Header("Audio Setting")]
+    public AudioSource objSource;
+    public AudioManager audioManager;
+
     [Header("Movement Settings")]
     public float speed = 10f;
     public float sidewaysSpeed = 10f;
     public float swipDistanceY = 100f;
 
-    [Space]
     [Header("Jump Settings")]
     public float jumpForce = 5f;
-
-    [Header("Audio Setting")]
-    public AudioSource jumpSound;
-    public AudioSource runningSound;
 
     [Header("Particle Setting")]
     public ParticleSystem particle;
@@ -28,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
     private bool jumpAllowed;
     private Rigidbody rb;
     private Animator anim;
+    private AudioSource objSound;
     private Vector3 pointerStartPosition;
     private Vector3 deltaPosition;
     private Vector3 pointerEndPosition;
@@ -37,9 +37,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
-
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
+        objSource = GetComponent<AudioSource>();
         
     }
 
@@ -59,16 +59,17 @@ public class PlayerMovement : MonoBehaviour
         {
             buttonsPanel.SetActive(true);
 
-            if (runningSound != null)
-                runningSound.Play();
-            
+            // play audio according to active object
+            if (audioManager != null)
+            {
+                Debug.Log("Accessing AudioManager audios");
+                audioManager.PlayAudioForRespectiveObject(charEnums, objSource);
+            }
 
             if (anim != null && charEnums == CharacterEnums.Person)
                 anim.SetBool("IsRunning", true);
 
             transform.Translate(Vector3.forward * speed * Time.fixedDeltaTime);
-
-            Jump();
 
             if (rb.position.y < -0.3f)
             {
@@ -85,20 +86,21 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    private void Jump()
-    {
-        if (jumpAllowed)
-        {
-            if(jumpSound != null) 
-                jumpSound.Play();
-            
-            particle.Play();
-            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-            anim.SetTrigger("IsJumped");
 
-            jumpAllowed = false;
-        }
-    }
+    //private void Jump()
+    //{
+    //    if (jumpAllowed)
+    //    {
+    //        if(jumpSound != null) 
+    //            jumpSound.Play();
+            
+    //        particle.Play();
+    //        rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+    //        anim.SetTrigger("IsJumped");
+
+    //        jumpAllowed = false;
+    //    }
+    //}
 
     //private void SwipController()
     //{
