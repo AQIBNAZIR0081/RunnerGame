@@ -9,10 +9,12 @@ public class SwipeController : MonoBehaviour
     // Public Fields
     public float swipeThreshold = 20f;
     public float disBetweenLines = 3;
+    public float timeToInterpo = 0.2f;
     public int currentLine = 1;
 
     // Private Fields
     private bool ispressing;
+    private Vector3 initialPosition;
     private Vector3 targetPosition;
     private Vector2 pointStartPosition, pointEndPosition;
 
@@ -47,7 +49,7 @@ public class SwipeController : MonoBehaviour
             {
 
                 // get the finger first and last position difference
-                Vector2 delta = pointEndPosition - pointStartPosition;
+                Vector2 delta = touch.position - pointStartPosition;
 
 
                 // get the position of finger on the x-axis of the screen
@@ -63,11 +65,8 @@ public class SwipeController : MonoBehaviour
                 if (delta.x > 0 && deltaLength > swipeThreshold && currentLine < 2)
                 {
 
-                    Vector3 initialPosition = activeObject.transform.position;
+                    InterpolateBetweenLines(activeObject, false);
 
-                    // set the active Object position to the right by line distance
-                    activeObject.transform.position = new Vector3(initialPosition.x + disBetweenLines, initialPosition.y, initialPosition.z);
-                    
                     // increase the currentLine by 1
                     currentLine += 1;
 
@@ -78,10 +77,7 @@ public class SwipeController : MonoBehaviour
                 // check if the delta length is greater then swipeThreshold and finger is moving on screen in -ve x-axis direction
                 else if (delta.x < 0 && deltaLength > swipeThreshold && currentLine > 0)
                 {
-                    Vector3 initialPosition = activeObject.transform.position;
-
-                    // set the active Object position to the left by line distance
-                    activeObject.transform.position = new Vector3(initialPosition.x - disBetweenLines, initialPosition.y, initialPosition.z);
+                    InterpolateBetweenLines(activeObject, true);
 
                     // decrease the currentLine by 1
                     currentLine -= 1;
@@ -98,6 +94,30 @@ public class SwipeController : MonoBehaviour
                 ispressing = false;
             }
         }
+    }
+
+    void InterpolateBetweenLines(GameObject obj, bool rightToLeft) 
+    {
+        initialPosition = obj.transform.position;
+        Debug.Log("InitialPosition: " + initialPosition);
+
+
+        if(rightToLeft== true)
+        {
+            targetPosition = new Vector3(initialPosition.x - disBetweenLines, initialPosition.y, initialPosition.z);
+            Debug.Log("TargetPosition: "+ targetPosition);
+        }
+        else
+        {
+            targetPosition = new Vector3(initialPosition.x + disBetweenLines, initialPosition.y, initialPosition.z);
+            Debug.Log("TargetPosition: " + targetPosition);
+        }
+
+        obj.transform.position = Vector3.Lerp(initialPosition, targetPosition, timeToInterpo);
+
+        //obj.transform.position = Vector3.Lerp(initialPosition, targetPosition, timeToInterpo);
+        Debug.Log("PositionAfterInterpolate " + obj.transform.position);
+
     }
 
 }

@@ -1,6 +1,4 @@
-using System;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -29,8 +27,8 @@ public class PlayerMovement : MonoBehaviour
     private Animator anim;
     private AudioSource objSound;
     private Vector3 pointerStartPosition;
-    private Vector3 deltaPosition;
     private Vector3 pointerEndPosition;
+    private Vector3 deltaPosition;
 
     //private bool isMovingLeft = false;
     //private bool isMovingRight = false;
@@ -62,7 +60,6 @@ public class PlayerMovement : MonoBehaviour
             // play audio according to active object
             if (audioManager != null)
             {
-                Debug.Log("Accessing AudioManager audios");
                 audioManager.PlayAudioForRespectiveObject(charEnums, objSource);
             }
 
