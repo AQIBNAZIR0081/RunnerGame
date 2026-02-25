@@ -22,14 +22,14 @@ public class PlayerMovement : MonoBehaviour
     [Header("Object Switcher")]
     public GameObject buttonsPanel;
 
-    private bool jumpAllowed;
     private Rigidbody rb;
     private Animator anim;
-    private AudioSource objSound;
-    private Vector3 pointerStartPosition;
-    private Vector3 pointerEndPosition;
-    private Vector3 deltaPosition;
 
+    //private bool jumpAllowed;
+    //private AudioSource objSound;
+    //private Vector3 pointerStartPosition;
+    //private Vector3 pointerEndPosition;
+    //private Vector3 deltaPosition;
     //private bool isMovingLeft = false;
     //private bool isMovingRight = false;
 
