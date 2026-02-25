@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class SwipeController : MonoBehaviour
@@ -9,28 +10,51 @@ public class SwipeController : MonoBehaviour
     // Public Fields
     public float swipeThreshold = 20f;
     public float disBetweenLines = 3;
-    public float timeToInterpo = 0.2f;
+    public float duration = 0.2f;
     public int currentLine = 1;
 
     // Private Fields
+    private GameObject refObj;
     private bool ispressing;
+    private bool isInterpolate = false;
+    private float elapsedTime;
     private Vector3 initialPosition;
     private Vector3 targetPosition;
     private Vector2 pointStartPosition, pointEndPosition;
 
-
     void Awake()
     {
-        if(Instance == null)
+        if (Instance == null)
         {
             Instance = this;
+        }
+    }
+
+    private void Update()
+    {
+        if (isInterpolate)
+        {
+            elapsedTime += Time.deltaTime;
+
+            float t = Mathf.Clamp01(elapsedTime / duration);
+            float newXPosition = Mathf.Lerp(initialPosition.x, targetPosition.x, t);
+
+            Vector3 currentPos = refObj.transform.position;
+
+            refObj.transform.position =
+                new Vector3(newXPosition, currentPos.y, currentPos.z);
+
+            if (t >= 1f)
+            {
+                isInterpolate = false;
+            }
         }
     }
 
     // TouchInput Method for each player GameObject present in game
     public void TouchesInput(GameObject activeObject)
     {
-
+        refObj = activeObject;
         // If there is touch on the screen
         if (Input.touchCount > 0)
         {
@@ -45,45 +69,26 @@ public class SwipeController : MonoBehaviour
             }
 
             // When finger in moving on the screen
-            if (touch.phase == TouchPhase.Moved && ispressing == false)
+            if (touch.phase == TouchPhase.Moved && !ispressing)
             {
 
                 // get the finger first and last position difference
                 Vector2 delta = touch.position - pointStartPosition;
 
-
-                // get the position of finger on the x-axis of the screen
-                Vector2 deltaXstart = new Vector2(pointStartPosition.x, 0);
-                Vector2 deltaXend = new Vector2(pointEndPosition.x, 0);
-
-
-                // get the x-axis delta Length difference of start and end position of screen pointer
-                float deltaLength = (deltaXend - deltaXstart).magnitude;
-
-
-                // check if the delta length is greater then swipeThreshold and finger is moving on screen in x-axis direction
-                if (delta.x > 0 && deltaLength > swipeThreshold && currentLine < 2)
+                if (Mathf.Abs(delta.x) > swipeThreshold)
                 {
-
-                    InterpolateBetweenLines(activeObject, false);
-
-                    // increase the currentLine by 1
-                    currentLine += 1;
-
+                    // swipe Right
+                    if (delta.x > 0 && currentLine < 2)
+                    {
+                        currentLine++;
+                        InterpolateBetweenLines(false);
+                    }
+                    else if (delta.x < 0 && currentLine > 0)
+                    {
+                        currentLine--;
+                        InterpolateBetweenLines(true);
+                    }
                     ispressing = true;
-
-                }
-
-                // check if the delta length is greater then swipeThreshold and finger is moving on screen in -ve x-axis direction
-                else if (delta.x < 0 && deltaLength > swipeThreshold && currentLine > 0)
-                {
-                    InterpolateBetweenLines(activeObject, true);
-
-                    // decrease the currentLine by 1
-                    currentLine -= 1;
-
-                    ispressing = true;
-
                 }
             }
 
@@ -96,16 +101,17 @@ public class SwipeController : MonoBehaviour
         }
     }
 
-    void InterpolateBetweenLines(GameObject obj, bool rightToLeft) 
+    void InterpolateBetweenLines(bool rightToLeft)
     {
-        initialPosition = obj.transform.position;
+        if (isInterpolate) return;
+
+        initialPosition =   new Vector3( refObj.transform.position.x, 0, 0);
         Debug.Log("InitialPosition: " + initialPosition);
 
-
-        if(rightToLeft== true)
+        if (rightToLeft)
         {
             targetPosition = new Vector3(initialPosition.x - disBetweenLines, initialPosition.y, initialPosition.z);
-            Debug.Log("TargetPosition: "+ targetPosition);
+            Debug.Log("TargetPosition: " + targetPosition);
         }
         else
         {
@@ -113,11 +119,8 @@ public class SwipeController : MonoBehaviour
             Debug.Log("TargetPosition: " + targetPosition);
         }
 
-        obj.transform.position = Vector3.Lerp(initialPosition, targetPosition, timeToInterpo);
-
-        //obj.transform.position = Vector3.Lerp(initialPosition, targetPosition, timeToInterpo);
-        Debug.Log("PositionAfterInterpolate " + obj.transform.position);
-
+        elapsedTime = 0f;
+        isInterpolate = true;
     }
 
 }

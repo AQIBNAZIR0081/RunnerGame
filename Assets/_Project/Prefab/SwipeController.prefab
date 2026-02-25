@@ -46,5 +46,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SwipeController
   swipeThreshold: 50
   disBetweenLines: 1.5
-  timeToIntPo: 0.5
+  duration: 0.4
   currentLine: 1
