@@ -6822,9 +6822,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 986230524236465206}
+  - component: {fileID: 7968610659990759797}
   - component: {fileID: 2965129889245964411}
   - component: {fileID: 2921159458650097692}
-  - component: {fileID: 7968610659990759797}
   - component: {fileID: 2866374146358341035}
   - component: {fileID: 3228286773193085210}
   - component: {fileID: 458765946438619006}
@@ -6854,6 +6854,33 @@ Transform:
   - {fileID: 451201584087408812}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &7968610659990759797
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7728099459630632071}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!95 &2965129889245964411
 Animator:
   serializedVersion: 7
@@ -6897,33 +6924,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.35927284, y: 1.364663, z: 0.37987018}
   m_Center: {x: 0.000000059604645, y: 0.69570225, z: 0.034029216}
---- !u!54 &7968610659990759797
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7728099459630632071}
-  serializedVersion: 5
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 112
-  m_CollisionDetection: 0
 --- !u!114 &2866374146358341035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6937,12 +6937,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   charEnums: 0
+  objSource: {fileID: 0}
+  audioManager: {fileID: 0}
   speed: 8
   sidewaysSpeed: 10
   swipDistanceY: 80
   jumpForce: 5
-  jumpSound: {fileID: 0}
-  runningSound: {fileID: 5802701214100087716}
   particle: {fileID: 4042793762873720558}
   buttonsPanel: {fileID: 0}
 --- !u!114 &3228286773193085210

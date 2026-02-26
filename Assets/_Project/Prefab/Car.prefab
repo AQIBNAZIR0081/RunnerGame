@@ -100,8 +100,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 900287536886180274}
-  - component: {fileID: 6897359653159108371}
   - component: {fileID: 1387701339233067927}
+  - component: {fileID: 6897359653159108371}
   - component: {fileID: 8964911113945885409}
   - component: {fileID: 1474134559312001824}
   - component: {fileID: 1618895274190863505}
@@ -136,27 +136,6 @@ Transform:
   - {fileID: 3025850717486567690}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &6897359653159108371
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 703528120324494949}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 3.6, y: 1.83, z: 8}
-  m_Center: {x: 0, y: 0.92, z: 0.23}
 --- !u!54 &1387701339233067927
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -184,6 +163,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 1
+--- !u!65 &6897359653159108371
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 703528120324494949}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.6, y: 1.83, z: 8}
+  m_Center: {x: 0, y: 0.92, z: 0.23}
 --- !u!114 &8964911113945885409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,12 +197,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   charEnums: 2
+  objSource: {fileID: 0}
+  audioManager: {fileID: 0}
   speed: 15
   sidewaysSpeed: 10
   swipDistanceY: 80
   jumpForce: 8
-  jumpSound: {fileID: 0}
-  runningSound: {fileID: 0}
   particle: {fileID: 0}
   buttonsPanel: {fileID: 0}
 --- !u!114 &1474134559312001824

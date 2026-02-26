@@ -3,9 +3,10 @@ using UnityEngine;
 public class TaptoStart : MonoBehaviour
 {
     public static TaptoStart instance;
+    
+    public GameObject InfoCanvas;
     public bool isGameStart;
 
-    public GameObject tapToStartBtn;
     private Animator animator;
 
 
@@ -18,14 +19,14 @@ public class TaptoStart : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        animator = GetComponent<Animator>();
+        animator = GetComponentInChildren<Animator>();
         isGameStart = false;
     }
 
     public void GameStarted()
     {
         isGameStart = true;
-        tapToStartBtn.SetActive(false);
+        InfoCanvas.SetActive(false);
         
     }
 }
