@@ -1,9 +1,15 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MainMenuManager : MonoBehaviour
 {
+    [Header("Setting Panel")]
+    public GameObject settingPanel;
+
+    [Space]
+    [Header("Game Setting")]
     public GameObject mute;
     public GameObject unmute;
     public AudioSource backgroundMusic;
@@ -21,9 +27,11 @@ public class MainMenuManager : MonoBehaviour
     // Start the game on button click
     public void StartGame()
     {
-        SceneManager.LoadScene("MissionSelection");
+        SceneManager.LoadScene("EnvironmentSelection");
     }
 
+
+    #region GameSetting
     // Mute or unmute the background music on button click
     public void MuteOrUnmuteSound()
     {
@@ -48,6 +56,28 @@ public class MainMenuManager : MonoBehaviour
     {
         mute.SetActive(isMute);
         unmute.SetActive(!isMute);
+    }
+
+    #endregion
+
+
+    // Open the setting panel
+    public void ClickOnSettingButton()
+    {
+        settingPanel.SetActive(true);
+        settingPanel.gameObject.GetComponent<Animator>().Play("Open_SettingPanel");
+    }
+
+    // Close the setting panel
+    public void ClickOnCloseButton()
+    {
+        settingPanel.gameObject.GetComponent<Animator>().SetBool("SettingClosed", true);
+        Invoke(nameof(DeactivateSettingPanel), 0.8f);
+    }
+
+    private void DeactivateSettingPanel()
+    {
+        settingPanel.SetActive(false);
     }
 
 }
