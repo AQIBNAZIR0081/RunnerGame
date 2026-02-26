@@ -1,3 +1,4 @@
+using System;
 using System.Drawing;
 using UnityEngine;
 using UnityEngine.UI;
@@ -6,8 +7,8 @@ public class CollisionDetection : MonoBehaviour
 {
     public AudioSource hitSound;
     public Slider healthSlider;
-    public float scaleReductionAmount;
-    public float scaleIncreasingAmount;
+    public float healthReductionAmount;
+    public float healthIncreasingAmount;
 
     [SerializeField]
     private float currentHealth;
@@ -26,6 +27,8 @@ public class CollisionDetection : MonoBehaviour
         if (other.gameObject.CompareTag("Finish"))
         {
             GameManager.Instance.WinGame();
+
+            DisableAllScripts();
         }
 
         SizeReducer(other);
@@ -34,6 +37,17 @@ public class CollisionDetection : MonoBehaviour
 
     }
 
+    private void DisableAllScripts()
+    {
+        MonoBehaviour[] attachedScripts = gameObject.GetComponents<MonoBehaviour>();
+
+        foreach (MonoBehaviour attachScript in attachedScripts)
+        {
+            attachScript.enabled = false;
+        }
+
+        gameObject.GetComponent<AudioSource>().enabled = false;
+    }
 
     private void SizeIncreaser(Collider other)
     {
@@ -47,7 +61,7 @@ public class CollisionDetection : MonoBehaviour
                 Handheld.Vibrate();
 
                 // increase the health of the player when it exit a "SizeIncreasing" trigger
-                IncreaseHealth(scaleIncreasingAmount);
+                IncreaseHealth(healthIncreasingAmount);
 
             }
 
@@ -67,7 +81,7 @@ public class CollisionDetection : MonoBehaviour
                 Handheld.Vibrate();
 
                 // decrease the health of the player when it exit a "SizeReduction" trigger
-                ReduceHealth(scaleReductionAmount);
+                ReduceHealth(healthReductionAmount);
 
             }
 
@@ -77,14 +91,6 @@ public class CollisionDetection : MonoBehaviour
     }
 
 
-    private void GameOver()
-    {
-        GameManager.Instance.LoseGame();
-    }
-
-
-
-    #region Health
     private void ReduceHealth(float decreaseAmount)
     {
         currentHealth = Mathf.Clamp(currentHealth - decreaseAmount, 0, 1);
@@ -103,7 +109,10 @@ public class CollisionDetection : MonoBehaviour
         healthSlider.value = currentHealth;
     }
 
-    #endregion
+    private void GameOver()
+    {
+        GameManager.Instance.LoseGame();
+    }
 
     #region LocalScaleChange
     /*
