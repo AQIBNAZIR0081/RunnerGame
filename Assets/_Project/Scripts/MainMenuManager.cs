@@ -60,6 +60,7 @@ public class MainMenuManager : MonoBehaviour
 
     #endregion
 
+    #region SettingActivateDeactivate
 
     // Open the setting panel
     public void ClickOnSettingButton()
@@ -80,4 +81,5 @@ public class MainMenuManager : MonoBehaviour
         settingPanel.SetActive(false);
     }
 
+    #endregion
 }
