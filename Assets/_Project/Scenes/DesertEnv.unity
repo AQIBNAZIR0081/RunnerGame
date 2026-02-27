@@ -46251,10 +46251,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1460972573}
-    - target: {fileID: 2368219732148085187, guid: e2f23f9d45d35b448a8134eac71db4e8, type: 3}
-      propertyPath: m_Resource
-      value: 
-      objectReference: {fileID: 8300000, guid: c545c572d994092489a1d6f359d7f9a5, type: 3}
     - target: {fileID: 2426702011605381161, guid: e2f23f9d45d35b448a8134eac71db4e8, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -46263,14 +46259,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3139958895712280154, guid: e2f23f9d45d35b448a8134eac71db4e8, type: 3}
-      propertyPath: m_Resource
-      value: 
-      objectReference: {fileID: 8300000, guid: c545c572d994092489a1d6f359d7f9a5, type: 3}
-    - target: {fileID: 3581497946241268233, guid: e2f23f9d45d35b448a8134eac71db4e8, type: 3}
-      propertyPath: m_Resource
-      value: 
-      objectReference: {fileID: 8300000, guid: c545c572d994092489a1d6f359d7f9a5, type: 3}
     - target: {fileID: 4397678334676111252, guid: e2f23f9d45d35b448a8134eac71db4e8, type: 3}
       propertyPath: m_Name
       value: ControllerCanvas

@@ -106,17 +106,14 @@ public class SwipeController : MonoBehaviour
         if (isInterpolate) return;
 
         initialPosition =   new Vector3( refObj.transform.position.x, 0, 0);
-        Debug.Log("InitialPosition: " + initialPosition);
 
         if (rightToLeft)
         {
             targetPosition = new Vector3(initialPosition.x - disBetweenLines, initialPosition.y, initialPosition.z);
-            Debug.Log("TargetPosition: " + targetPosition);
         }
         else
         {
             targetPosition = new Vector3(initialPosition.x + disBetweenLines, initialPosition.y, initialPosition.z);
-            Debug.Log("TargetPosition: " + targetPosition);
         }
 
         elapsedTime = 0f;
