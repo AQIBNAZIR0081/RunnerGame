@@ -7,13 +7,27 @@ public class ObjectSwitcher : MonoBehaviour
 
     [Header("Lerping Scale")]
     public Vector3 targetScale;
-    public float scaleLerpDuration = 1f;
-    private Vector3 originalScale;
+    public float scaleLerpDuration = 0.5f;
+
+
+    private Vector3 currentScale;
+    private float elapsedTime = 0f;
+    private Vector3 initialScaleOfEachObject;
+
 
     [SerializeField]
     private GameObject[] characterContainer;
-
     private GameObject previousActiveObject;
+
+    private void Start()
+    {
+        foreach (var obj in characterContainer)
+        {
+            initialScaleOfEachObject = obj.transform.localScale;
+             Debug.Log("Initial Scale of " + obj.name + " is " + initialScaleOfEachObject);
+        }
+    }
+
 
     private void SwitchObjectCheck()
     {
@@ -22,9 +36,11 @@ public class ObjectSwitcher : MonoBehaviour
             if (characterContainer[i].activeInHierarchy)
             {
                 previousActiveObject = characterContainer[i];
-                StartCoroutine(PreviousObjectLerpScale(previousActiveObject);
+                Debug.Log("Object " + previousActiveObject.name + " local sale " + previousActiveObject.transform.localScale);
+
                 previousActiveObject.SetActive(false);
             }
+           
         }
     }
 
@@ -57,29 +73,22 @@ public class ObjectSwitcher : MonoBehaviour
 
     IEnumerator NewActiveObjectLerpScale(GameObject obj)
     {
-        float elapsedTime = 0f;
-        originalScale = obj.transform.localScale;
+        currentScale = obj.transform.localScale;
+
         while (elapsedTime < scaleLerpDuration)
         {
             float t = elapsedTime / scaleLerpDuration;
-            obj.transform.localScale = Vector3.Lerp(targetScale, originalScale, t);
+            obj.transform.localScale = new Vector3(0, 0, 0);
+
+            Debug.Log("Lerping " + obj.name + " local sale " + obj.transform.localScale);
+
+            obj.transform.localScale = Vector3.Lerp(targetScale, currentScale, t);
             elapsedTime += Time.deltaTime;
             yield return null;
         }
-        obj.transform.localScale = originalScale;
+
+        elapsedTime = 0;
+        Debug.Log("Object " + obj.name + " local sale " + obj.transform.localScale + " after lerp");
     }
 
-    IEnumerator PreviousObjectLerpScale(GameObject obj)
-    {
-        float elapsedTime = 0f;
-        originalScale = obj.transform.localScale;
-        while (elapsedTime < scaleLerpDuration)
-        {
-            float t = elapsedTime / scaleLerpDuration;
-            obj.transform.localScale = Vector3.Lerp(originalScale, Vector3.zero, t);
-            elapsedTime += Time.deltaTime;
-            yield return null;
-        }
-        obj.transform.localScale = originalScale;
-    }
 }
