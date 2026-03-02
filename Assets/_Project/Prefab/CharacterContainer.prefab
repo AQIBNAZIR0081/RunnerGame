@@ -90,6 +90,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1474134559312001824, guid: e3551855f08dfda4ab1fa7e322368697, type: 3}
+      propertyPath: healthReductionAmount
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474134559312001824, guid: e3551855f08dfda4ab1fa7e322368697, type: 3}
+      propertyPath: healthIncreasingAmount
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 8964911113945885409, guid: e3551855f08dfda4ab1fa7e322368697, type: 3}
       propertyPath: particle
       value: 
@@ -230,6 +238,14 @@ PrefabInstance:
       propertyPath: objSource
       value: 
       objectReference: {fileID: 7441064628844516255}
+    - target: {fileID: 3189013355181155706, guid: f89c4802851f3974e94b8f63da2a950f, type: 3}
+      propertyPath: healthReductionAmount
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3189013355181155706, guid: f89c4802851f3974e94b8f63da2a950f, type: 3}
+      propertyPath: healthIncreasingAmount
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 4544590117971287714, guid: f89c4802851f3974e94b8f63da2a950f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -307,7 +323,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: b3057bde9ff821c4ca64c16e04192ea6, type: 3}
+  m_Resource: {fileID: 8300000, guid: 12e265baa1129d048a94fd3098496429, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -457,6 +473,14 @@ PrefabInstance:
       propertyPath: objSource
       value: 
       objectReference: {fileID: 732149682138937769}
+    - target: {fileID: 3228286773193085210, guid: b5a3737d7b5bf7d4a85a67392692fc75, type: 3}
+      propertyPath: healthReductionAmount
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3228286773193085210, guid: b5a3737d7b5bf7d4a85a67392692fc75, type: 3}
+      propertyPath: healthIncreasingAmount
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 5802701214100087716, guid: b5a3737d7b5bf7d4a85a67392692fc75, type: 3}
       propertyPath: Loop
       value: 1

@@ -21293,11 +21293,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5359aeae7eb71b74c984d2d6f18cb204, type: 3}
---- !u!198 &1021608647 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 7897342504492334954, guid: 1e689307ff5008447a7d67affa224438, type: 3}
-  m_PrefabInstance: {fileID: 1869427510135419289}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1025317004
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22196,6 +22191,46 @@ PrefabInstance:
     - target: {fileID: 4301183312373569425, guid: 324bf99e715a69f4fbf0f82f0444c63a, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4676826937304893518, guid: 324bf99e715a69f4fbf0f82f0444c63a, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4676826937304893518, guid: 324bf99e715a69f4fbf0f82f0444c63a, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4676826937304893518, guid: 324bf99e715a69f4fbf0f82f0444c63a, type: 3}
+      propertyPath: InitialModule.startSizeY.scalar
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4676826937304893518, guid: 324bf99e715a69f4fbf0f82f0444c63a, type: 3}
+      propertyPath: InitialModule.startSizeZ.scalar
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4676826937304893518, guid: 324bf99e715a69f4fbf0f82f0444c63a, type: 3}
+      propertyPath: InitialModule.startSize.minScalar
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4676826937304893518, guid: 324bf99e715a69f4fbf0f82f0444c63a, type: 3}
+      propertyPath: InitialModule.startSizeY.minScalar
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4676826937304893518, guid: 324bf99e715a69f4fbf0f82f0444c63a, type: 3}
+      propertyPath: InitialModule.startSizeZ.minScalar
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4676826937304893518, guid: 324bf99e715a69f4fbf0f82f0444c63a, type: 3}
+      propertyPath: InitialModule.startSize.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4676826937304893518, guid: 324bf99e715a69f4fbf0f82f0444c63a, type: 3}
+      propertyPath: InitialModule.startSizeY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4676826937304893518, guid: 324bf99e715a69f4fbf0f82f0444c63a, type: 3}
+      propertyPath: InitialModule.startSizeZ.minMaxState
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23437,10 +23472,6 @@ PrefabInstance:
     - target: {fileID: 4301183312373569425, guid: 324bf99e715a69f4fbf0f82f0444c63a, type: 3}
       propertyPath: m_Name
       value: barrier1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4301183312373569425, guid: 324bf99e715a69f4fbf0f82f0444c63a, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -28962,10 +28993,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: barrier1 (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 4301183312373569425, guid: 324bf99e715a69f4fbf0f82f0444c63a, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -32662,7 +32689,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3323615560476327738, guid: ad673bd86fb36e9409559215e4a26106, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.99858606
+      value: -0.91
       objectReference: {fileID: 0}
     - target: {fileID: 3323615560476327738, guid: ad673bd86fb36e9409559215e4a26106, type: 3}
       propertyPath: m_LocalPosition.y
@@ -46405,6 +46432,10 @@ PrefabInstance:
       value: ObjectSwitcher
       objectReference: {fileID: 0}
     - target: {fileID: 7343582241740378486, guid: 277696a4c1f7e8e4d855c075c6852c94, type: 3}
+      propertyPath: lerpScaleDuration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7343582241740378486, guid: 277696a4c1f7e8e4d855c075c6852c94, type: 3}
       propertyPath: 'characterContainer.Array.data[0]'
       value: 
       objectReference: {fileID: 4631006919637459053}
@@ -46499,18 +46530,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 280458541758249016, guid: 1e689307ff5008447a7d67affa224438, type: 3}
-      propertyPath: particle
-      value: 
-      objectReference: {fileID: 1021608647}
-    - target: {fileID: 280458541758249016, guid: 1e689307ff5008447a7d67affa224438, type: 3}
-      propertyPath: jumpSound
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 280458541758249016, guid: 1e689307ff5008447a7d67affa224438, type: 3}
-      propertyPath: buttonsPanel
-      value: 
-      objectReference: {fileID: 2107119607}
     - target: {fileID: 621849278401909970, guid: 1e689307ff5008447a7d67affa224438, type: 3}
       propertyPath: audioManager
       value: 
@@ -46543,18 +46562,6 @@ PrefabInstance:
       propertyPath: _camera
       value: 
       objectReference: {fileID: 6033045}
-    - target: {fileID: 1480844450946711187, guid: 1e689307ff5008447a7d67affa224438, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5138833411558373604, guid: 1e689307ff5008447a7d67affa224438, type: 3}
-      propertyPath: hitSound
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5138833411558373604, guid: 1e689307ff5008447a7d67affa224438, type: 3}
-      propertyPath: healthSlider
-      value: 
-      objectReference: {fileID: 1357305257}
     - target: {fileID: 6043762088250068730, guid: 1e689307ff5008447a7d67affa224438, type: 3}
       propertyPath: _camera
       value: 
@@ -46563,18 +46570,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CharacterContainer
       objectReference: {fileID: 0}
-    - target: {fileID: 6866149145836349323, guid: 1e689307ff5008447a7d67affa224438, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7000748998118851095, guid: 1e689307ff5008447a7d67affa224438, type: 3}
-      propertyPath: particle
-      value: 
-      objectReference: {fileID: 1021608647}
-    - target: {fileID: 7000748998118851095, guid: 1e689307ff5008447a7d67affa224438, type: 3}
-      propertyPath: jumpSound
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 7000748998118851095, guid: 1e689307ff5008447a7d67affa224438, type: 3}
       propertyPath: audioManager
       value: 
@@ -46583,14 +46578,6 @@ PrefabInstance:
       propertyPath: buttonsPanel
       value: 
       objectReference: {fileID: 2107119607}
-    - target: {fileID: 7441064628844516255, guid: 1e689307ff5008447a7d67affa224438, type: 3}
-      propertyPath: m_Resource
-      value: 
-      objectReference: {fileID: 8300000, guid: 12e265baa1129d048a94fd3098496429, type: 3}
-    - target: {fileID: 8234115805639748655, guid: 1e689307ff5008447a7d67affa224438, type: 3}
-      propertyPath: jumpSound
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 8234115805639748655, guid: 1e689307ff5008447a7d67affa224438, type: 3}
       propertyPath: audioManager
       value: 
@@ -46599,10 +46586,6 @@ PrefabInstance:
       propertyPath: buttonsPanel
       value: 
       objectReference: {fileID: 2107119607}
-    - target: {fileID: 8236331140907957953, guid: 1e689307ff5008447a7d67affa224438, type: 3}
-      propertyPath: _camera
-      value: 
-      objectReference: {fileID: 6033045}
     - target: {fileID: 8741259401515454622, guid: 1e689307ff5008447a7d67affa224438, type: 3}
       propertyPath: hitSound
       value: 
@@ -46847,6 +46830,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 864135403}
     m_Modifications:
+    - target: {fileID: 3830667951255221437, guid: ca8b74db0248dc64c85010df4d32d8a3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -27.35669
+      objectReference: {fileID: 0}
     - target: {fileID: 4915958694934908813, guid: ca8b74db0248dc64c85010df4d32d8a3, type: 3}
       propertyPath: m_Resource
       value: 

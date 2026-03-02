@@ -1,5 +1,5 @@
-using System;
-using System.Drawing;
+using System.Collections;
+using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,8 +17,8 @@ public class CollisionDetection : MonoBehaviour
     {
         // Initialize health slider to full health
         healthSlider.value = 1.0f;
-
         currentHealth = healthSlider.value;
+
     }
 
 
@@ -35,6 +35,32 @@ public class CollisionDetection : MonoBehaviour
         
         SizeIncreaser(other);
 
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Obstacle"))
+        {
+            PlayerMovement playerMovement = GetComponent<PlayerMovement>();
+            CharacterEnums charEnum = playerMovement.charEnums;
+            
+            switch (charEnum)
+            {
+                case CharacterEnums.Person:
+                case CharacterEnums.Car:
+                    HandleHit();
+                    break;
+                case CharacterEnums.Bulldozer:
+                    ParticleSystem particle = collision.gameObject.GetComponentInChildren<ParticleSystem>();
+                    Debug.Log("Particle system found: " + (particle != null));
+                    if (particle != null)
+                    {
+                        particle.Play();
+                    }
+                    StartCoroutine(DeactivateObjectOnCollision(collision.gameObject));
+                    break;
+            }
+        }
     }
 
     private void DisableAllScripts()
@@ -103,6 +129,21 @@ public class CollisionDetection : MonoBehaviour
 
     }
 
+    private void HandleHit()
+    {
+        // Play the hit sound effect when the player collides with an obstacle
+        hitSound.Play();
+        // Vibrate the device when the player collides with an obstacle
+        Handheld.Vibrate();
+
+        currentHealth = 0f;
+        healthSlider.value = currentHealth;
+        
+        DisableAllScripts();
+        GameOver();
+    }
+
+
     private void IncreaseHealth(float increaseAmount)
     {
         currentHealth = Mathf.Clamp(currentHealth + increaseAmount, 0, 1);
@@ -112,6 +153,12 @@ public class CollisionDetection : MonoBehaviour
     private void GameOver()
     {
         GameManager.Instance.LoseGame();
+    }
+
+    IEnumerator DeactivateObjectOnCollision(GameObject obj)
+    {
+        yield return new WaitForSeconds(0.02f);
+        obj.SetActive(false);
     }
 
     #region LocalScaleChange
