@@ -21,6 +21,16 @@ public class CollisionDetection : MonoBehaviour
 
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Coin"))
+        {
+            AudioSource source = other.gameObject.GetComponent<AudioSource>();
+            AudioManager.Instance.PlaySound(source);
+
+            other.gameObject.SetActive(false);
+        }
+    }
 
     private void OnTriggerExit(Collider other)
     {

@@ -2,6 +2,16 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
+    public static AudioManager Instance { get; private set; }
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+    }
+
     public void PlayAudioForRespectiveObject(CharacterEnums objEnum, AudioSource objSound)
     {
 
@@ -29,7 +39,7 @@ public class AudioManager : MonoBehaviour
     }
 
 
-    private void PlaySound(AudioSource source)
+    public void PlaySound(AudioSource source)
     {
         if(source != null && !source.isPlaying)
         {

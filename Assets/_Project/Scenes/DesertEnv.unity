@@ -46274,6 +46274,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1460972573}
+    - target: {fileID: 1297800122333939132, guid: e2f23f9d45d35b448a8134eac71db4e8, type: 3}
+      propertyPath: m_Name
+      value: CoinAmountTxt
+      objectReference: {fileID: 0}
     - target: {fileID: 1370999124797580214, guid: e2f23f9d45d35b448a8134eac71db4e8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
