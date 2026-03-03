@@ -9,6 +9,7 @@ TagManager:
   - SizeIncreaser
   - CubeDecal
   - Coin
+  - Bridge
   layers:
   - Default
   - TransparentFX

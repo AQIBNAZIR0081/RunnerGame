@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -57,6 +58,11 @@ public class CollisionDetection : MonoBehaviour
                     StartCoroutine(DeactivateObjectOnCollision(collision.gameObject));
                     break;
             }
+        }
+
+        if (collision.gameObject.CompareTag("Bridge"))
+        {
+            HandleHit();
         }
     }
 

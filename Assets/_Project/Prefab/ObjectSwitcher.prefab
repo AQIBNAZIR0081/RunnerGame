@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4a8de42562fba54b8dea0628caffac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  lerpScaleDuration: 0.2
+  lerpScaleDuration: 1
   characterContainer:
   - {fileID: 0}
   - {fileID: 0}
