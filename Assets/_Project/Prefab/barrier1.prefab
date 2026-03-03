@@ -197,6 +197,42 @@ PrefabInstance:
       propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7529138161240210544, guid: cbcb6ff47348f994b894e2e847abc128, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7529138161240210544, guid: cbcb6ff47348f994b894e2e847abc128, type: 3}
+      propertyPath: InitialModule.startSizeY.scalar
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7529138161240210544, guid: cbcb6ff47348f994b894e2e847abc128, type: 3}
+      propertyPath: InitialModule.startSizeZ.scalar
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7529138161240210544, guid: cbcb6ff47348f994b894e2e847abc128, type: 3}
+      propertyPath: InitialModule.startSize.minScalar
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7529138161240210544, guid: cbcb6ff47348f994b894e2e847abc128, type: 3}
+      propertyPath: InitialModule.startSizeY.minScalar
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7529138161240210544, guid: cbcb6ff47348f994b894e2e847abc128, type: 3}
+      propertyPath: InitialModule.startSizeZ.minScalar
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7529138161240210544, guid: cbcb6ff47348f994b894e2e847abc128, type: 3}
+      propertyPath: InitialModule.startSize.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7529138161240210544, guid: cbcb6ff47348f994b894e2e847abc128, type: 3}
+      propertyPath: InitialModule.startSizeY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7529138161240210544, guid: cbcb6ff47348f994b894e2e847abc128, type: 3}
+      propertyPath: InitialModule.startSizeZ.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
