@@ -1,5 +1,4 @@
 using System.Collections;
-using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,7 +9,6 @@ public class CollisionDetection : MonoBehaviour
     public float healthReductionAmount;
     public float healthIncreasingAmount;
 
-    [SerializeField]
     private float currentHealth;
 
     private void Start()
@@ -19,17 +17,6 @@ public class CollisionDetection : MonoBehaviour
         healthSlider.value = 1.0f;
         currentHealth = healthSlider.value;
 
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Coin"))
-        {
-            AudioSource source = other.gameObject.GetComponent<AudioSource>();
-            AudioManager.Instance.PlaySound(source);
-
-            other.gameObject.SetActive(false);
-        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -60,9 +47,9 @@ public class CollisionDetection : MonoBehaviour
                 case CharacterEnums.Car:
                     HandleHit();
                     break;
+
                 case CharacterEnums.Bulldozer:
                     ParticleSystem particle = collision.gameObject.GetComponentInChildren<ParticleSystem>();
-                    Debug.Log("Particle system found: " + (particle != null));
                     if (particle != null)
                     {
                         particle.Play();

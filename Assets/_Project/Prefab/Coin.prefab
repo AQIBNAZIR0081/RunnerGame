@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8759938644815119653}
   - component: {fileID: 942097804852515755}
   - component: {fileID: 4351287143470829342}
-  - component: {fileID: 4885316605878650824}
+  - component: {fileID: 3757619417718980477}
   - component: {fileID: 6566603977680921231}
   m_Layer: 0
   m_Name: Coin
@@ -29,13 +29,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5205417602322833735}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 14.994069, y: 0.8701457, z: 14.994069}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!33 &8759938644815119653
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -114,7 +114,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.021039017, y: 0.032814857, z: 0.020997517}
   m_Center: {x: 0.0000000027939677, y: 6.352747e-22, z: -0.0000000027939684}
---- !u!82 &4885316605878650824
+--- !u!82 &3757619417718980477
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -223,3 +223,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f549975f9e02d5c4b88101e10fecd0dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coin
+  coinCollectionSound: {fileID: 8300000, guid: 96b423821266a984290a39e329cf892a, type: 3}
+  onCoinCollected:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6566603977680921231}
+        m_TargetAssemblyTypeName: Coin, Assembly-CSharp
+        m_MethodName: PlayCoinCollectionSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: CoinManager, Assembly-CSharp
+        m_MethodName: IncrementScore
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: CoinUIController, Assembly-CSharp
+        m_MethodName: UpdateScoreOnUI
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
