@@ -12,7 +12,7 @@ public class Coin : MonoBehaviour
         if(other.gameObject.CompareTag("Player"))
         {
             onCoinCollected?.Invoke();
-            Invoke(nameof(DeactivateCoin), 0.1f);
+            Invoke(nameof(DeactivateCoin), 0.05f);
         }
     }
 
