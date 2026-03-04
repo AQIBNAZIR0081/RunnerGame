@@ -6823,8 +6823,8 @@ GameObject:
   m_Component:
   - component: {fileID: 986230524236465206}
   - component: {fileID: 7968610659990759797}
-  - component: {fileID: 2965129889245964411}
   - component: {fileID: 2921159458650097692}
+  - component: {fileID: 2965129889245964411}
   - component: {fileID: 2866374146358341035}
   - component: {fileID: 3228286773193085210}
   - component: {fileID: 458765946438619006}
@@ -6881,6 +6881,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!65 &2921159458650097692
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7728099459630632071}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.35927284, y: 1.364663, z: 0.37987018}
+  m_Center: {x: 0.000000059604645, y: 0.69570225, z: 0.034029216}
 --- !u!95 &2965129889245964411
 Animator:
   serializedVersion: 7
@@ -6903,27 +6924,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!65 &2921159458650097692
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7728099459630632071}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.35927284, y: 1.364663, z: 0.37987018}
-  m_Center: {x: 0.000000059604645, y: 0.69570225, z: 0.034029216}
 --- !u!114 &2866374146358341035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6959,9 +6959,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CollisionDetection
   hitSound: {fileID: 0}
   healthSlider: {fileID: 0}
-  scaleReductionAmount: 0.2
-  scaleIncreasingAmount: 0.2
-  currentHealth: 0
+  healthReductionAmount: 0
+  healthIncreasingAmount: 0
 --- !u!114 &458765946438619006
 MonoBehaviour:
   m_ObjectHideFlags: 0

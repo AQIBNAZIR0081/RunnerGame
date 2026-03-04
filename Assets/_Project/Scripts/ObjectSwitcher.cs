@@ -67,7 +67,7 @@ public class ObjectSwitcher : MonoBehaviour
         while (elapsedTime < lerpScaleDuration)
         {
             float t = elapsedTime / lerpScaleDuration;
-            obj.transform.localScale = new Vector3(0, 0, 0);
+            //obj.transform.localScale = new Vector3(0, 0, 0);
 
             Debug.Log("Lerping " + obj.name + " local sale " + obj.transform.localScale);
 

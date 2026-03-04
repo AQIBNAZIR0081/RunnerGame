@@ -10,6 +10,7 @@ TagManager:
   - CubeDecal
   - Coin
   - Bridge
+  - RockTrigger
   layers:
   - Default
   - TransparentFX
