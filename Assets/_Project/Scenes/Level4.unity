@@ -24578,10 +24578,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: barrier2
       objectReference: {fileID: 0}
-    - target: {fileID: 370606665818876511, guid: ad673bd86fb36e9409559215e4a26106, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 3323615560476327738, guid: ad673bd86fb36e9409559215e4a26106, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.387
@@ -32997,10 +32993,6 @@ PrefabInstance:
     - target: {fileID: 6141094295981067856, guid: 8bab2c3a72ebe6a47879c48e75a6bd25, type: 3}
       propertyPath: m_Name
       value: barrier3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6141094295981067856, guid: 8bab2c3a72ebe6a47879c48e75a6bd25, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 9164714490516664861, guid: 8bab2c3a72ebe6a47879c48e75a6bd25, type: 3}
       propertyPath: m_LocalPosition.x
