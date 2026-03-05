@@ -5,6 +5,7 @@ using UnityEngine.Events;
 public class Coin : MonoBehaviour
 {
     public AudioClip coinCollectionSound;
+    public float deactivateCoinDelay = 0.1f;
     public UnityEvent onCoinCollected;
 
     private void OnTriggerEnter(Collider other)
@@ -12,14 +13,17 @@ public class Coin : MonoBehaviour
         if(other.gameObject.CompareTag("Player"))
         {
             onCoinCollected?.Invoke();
-            Invoke(nameof(DeactivateCoin), 0.05f);
+            Invoke(nameof(DeactivateCoin), deactivateCoinDelay);
         }
     }
 
     public void PlayCoinCollectionSound()
     {
         AudioSource source = gameObject.GetComponent<AudioSource>();
-        source.PlayOneShot(coinCollectionSound);
+        if (!source.isPlaying)
+        {
+            source.PlayOneShot(coinCollectionSound);
+        }
     }
 
     private void DeactivateCoin()

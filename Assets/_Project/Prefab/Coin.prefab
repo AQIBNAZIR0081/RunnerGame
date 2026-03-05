@@ -224,6 +224,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coin
   coinCollectionSound: {fileID: 8300000, guid: 96b423821266a984290a39e329cf892a, type: 3}
+  deactivateCoinDelay: 0.15
   onCoinCollected:
     m_PersistentCalls:
       m_Calls:

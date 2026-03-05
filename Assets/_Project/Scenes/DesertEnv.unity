@@ -6638,10 +6638,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 585222742081349075}
     - target: {fileID: 8943987106579217810, guid: eb57c8a60ce5ebb4ba4d5aaf466f875c, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.87014574
-      objectReference: {fileID: 0}
-    - target: {fileID: 8943987106579217810, guid: eb57c8a60ce5ebb4ba4d5aaf466f875c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.02
       objectReference: {fileID: 0}
@@ -9864,6 +9860,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3318563181567831727, guid: 817fee9ce48d1354193dc87641b8a3e6, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3660593815552583528, guid: 817fee9ce48d1354193dc87641b8a3e6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -35331,7 +35331,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3757619417718980477, guid: eb57c8a60ce5ebb4ba4d5aaf466f875c, type: 3}
       propertyPath: MaxDistance
-      value: 1
+      value: 1.000001
       objectReference: {fileID: 0}
     - target: {fileID: 5205417602322833735, guid: eb57c8a60ce5ebb4ba4d5aaf466f875c, type: 3}
       propertyPath: m_Name
@@ -42629,6 +42629,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1773428127}
     m_Modifications:
+    - target: {fileID: 3757619417718980477, guid: eb57c8a60ce5ebb4ba4d5aaf466f875c, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5205417602322833735, guid: eb57c8a60ce5ebb4ba4d5aaf466f875c, type: 3}
       propertyPath: m_Name
       value: Coin_18
@@ -58147,10 +58151,6 @@ PrefabInstance:
       propertyPath: timer
       value: 
       objectReference: {fileID: 585222742081349076}
-    - target: {fileID: 6934253032537005910, guid: 29dc2d9447f55f14dab001976d2b6ab1, type: 3}
-      propertyPath: givenTime
-      value: 25
-      objectReference: {fileID: 0}
     - target: {fileID: 6934253032537005910, guid: 29dc2d9447f55f14dab001976d2b6ab1, type: 3}
       propertyPath: buttonToStartTimer
       value: 

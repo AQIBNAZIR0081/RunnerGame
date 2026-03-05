@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class CollisionDetection : MonoBehaviour
 {
-    public static CollisionDetection Instance { get; private set; }
+    public static CollisionDetection Instance { get; set; }
     public AudioSource hitSound;
     public Slider healthSlider;
     public float healthReductionAmount;
@@ -15,7 +15,10 @@ public class CollisionDetection : MonoBehaviour
 
     private void Awake()
     {
-        Instance = this;
+        if(Instance == null)
+        {
+            Instance = this;
+        }
     }
 
 
@@ -154,7 +157,8 @@ public class CollisionDetection : MonoBehaviour
 
     IEnumerator DeactivateObjectOnCollision(GameObject obj)
     {
-        yield return new WaitForSeconds(0.02f);
+        yield return new WaitForSeconds(0.05f);
+
         obj.SetActive(false);
     }
 
@@ -173,6 +177,8 @@ public class CollisionDetection : MonoBehaviour
             anim.enabled = false;
         }
         gameObject.GetComponent<AudioSource>().enabled = false;
+
+        Debug.Log("All scripts disabled.");
     }
 
 

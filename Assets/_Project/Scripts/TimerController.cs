@@ -24,20 +24,14 @@ public class TimerController : MonoBehaviour
 
             timeLeft -= Time.deltaTime;
 
-            if (timeLeft > 60)
-            {
-                FormatToMinSec();
-                
-            }
-            else
-            {
-                timer.text = timeLeft.ToString("Timer Left: " + "0:00");
-            }
-
             if (timeLeft <= 0)
             {
-                GameManager.Instance.LoseGame();
                 CollisionDetection.Instance.DisableAllScripts();
+                GameManager.Instance.LoseGame();
+            }else if (timeLeft > 60){
+                FormatToMinSec();
+            }else{
+                timer.text = timeLeft.ToString("Timer Left: " + "0:00");
             }
         }
     }

@@ -90,6 +90,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1387701339233067927, guid: e3551855f08dfda4ab1fa7e322368697, type: 3}
+      propertyPath: m_Constraints
+      value: 116
+      objectReference: {fileID: 0}
     - target: {fileID: 1474134559312001824, guid: e3551855f08dfda4ab1fa7e322368697, type: 3}
       propertyPath: healthReductionAmount
       value: 0.2
@@ -298,6 +302,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8225196790133853390, guid: f89c4802851f3974e94b8f63da2a950f, type: 3}
+      propertyPath: m_Constraints
+      value: 116
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -500,6 +508,10 @@ PrefabInstance:
     - target: {fileID: 7728099459630632071, guid: b5a3737d7b5bf7d4a85a67392692fc75, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7968610659990759797, guid: b5a3737d7b5bf7d4a85a67392692fc75, type: 3}
+      propertyPath: m_Constraints
+      value: 116
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5802701214100087716, guid: b5a3737d7b5bf7d4a85a67392692fc75, type: 3}
