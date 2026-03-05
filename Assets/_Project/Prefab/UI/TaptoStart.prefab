@@ -44,5 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc7271de702c5394c959290b4e56596e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TaptoStart
-  isGameStart: 0
-  tapToStartBtn: {fileID: 0}
+  InfoCanvas: {fileID: 0}
+  MovementInfoPanel: {fileID: 0}
+  ObjectPropertyPanel: {fileID: 0}

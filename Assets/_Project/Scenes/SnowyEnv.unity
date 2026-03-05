@@ -8542,9 +8542,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1949270711}
     - target: {fileID: 8575463823512666310, guid: da7705c1f307f994ba1baba8138a7f68, type: 3}
-      propertyPath: tapToStartBtn
+      propertyPath: MovementInfoPanel
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 629083999}
+    - target: {fileID: 8575463823512666310, guid: da7705c1f307f994ba1baba8138a7f68, type: 3}
+      propertyPath: ObjectPropertyPanel
+      value: 
+      objectReference: {fileID: 1784073395}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9142,6 +9146,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 8943987106579217810, guid: eb57c8a60ce5ebb4ba4d5aaf466f875c, type: 3}
   m_PrefabInstance: {fileID: 627499240}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &629083999 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3736379168826818287, guid: ca8b74db0248dc64c85010df4d32d8a3, type: 3}
+  m_PrefabInstance: {fileID: 1949270707}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &632792726
 PrefabInstance:
@@ -24054,6 +24063,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6221021443629402389, guid: a6630ca08ea4394489d643901192f454, type: 3}
   m_PrefabInstance: {fileID: 1773500965}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1784073395 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2858498194566831750, guid: ca8b74db0248dc64c85010df4d32d8a3, type: 3}
+  m_PrefabInstance: {fileID: 1949270707}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1784465609
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26435,6 +26449,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 864135403}
     m_Modifications:
+    - target: {fileID: 2858498194566831750, guid: ca8b74db0248dc64c85010df4d32d8a3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3736379168826818287, guid: ca8b74db0248dc64c85010df4d32d8a3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5198292261928721841, guid: ca8b74db0248dc64c85010df4d32d8a3, type: 3}
       propertyPath: m_Name
       value: PopUpCanvas
@@ -26527,6 +26549,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 2099114507}
+    - target: {fileID: 8560001790410048833, guid: ca8b74db0248dc64c85010df4d32d8a3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ShowObjPropertyPanel
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
