@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviour
         playerMovement.speed = 0;
         losePanel.SetActive(true);
         losePanelAnimator.Play("LosePanelFadeIn");
+        TaptoStart.instance.isGameStart = false;
     }
 
     public void Replay()

@@ -5,12 +5,19 @@ using UnityEngine.UI;
 
 public class CollisionDetection : MonoBehaviour
 {
+    public static CollisionDetection Instance { get; private set; }
     public AudioSource hitSound;
     public Slider healthSlider;
     public float healthReductionAmount;
     public float healthIncreasingAmount;
 
     private float currentHealth;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
 
     private void Start()
     {
@@ -64,18 +71,6 @@ public class CollisionDetection : MonoBehaviour
         {
             HandleHit();
         }
-    }
-
-    private void DisableAllScripts()
-    {
-        MonoBehaviour[] attachedScripts = gameObject.GetComponents<MonoBehaviour>();
-
-        foreach (MonoBehaviour attachScript in attachedScripts)
-        {
-            attachScript.enabled = false;
-        }
-
-        gameObject.GetComponent<AudioSource>().enabled = false;
     }
 
     private void SizeIncreaser(Collider other)
@@ -146,7 +141,6 @@ public class CollisionDetection : MonoBehaviour
         GameOver();
     }
 
-
     private void IncreaseHealth(float increaseAmount)
     {
         currentHealth = Mathf.Clamp(currentHealth + increaseAmount, 0, 1);
@@ -163,6 +157,24 @@ public class CollisionDetection : MonoBehaviour
         yield return new WaitForSeconds(0.02f);
         obj.SetActive(false);
     }
+
+    public void DisableAllScripts()
+    {
+        MonoBehaviour[] attachedScripts = gameObject.GetComponents<MonoBehaviour>();
+
+        foreach (MonoBehaviour attachScript in attachedScripts)
+        {
+            attachScript.enabled = false;
+        }
+
+        Animator anim = gameObject.GetComponent<Animator>();        
+        if(anim != null)
+        {
+            anim.enabled = false;
+        }
+        gameObject.GetComponent<AudioSource>().enabled = false;
+    }
+
 
     #region LocalScaleChange
     /*

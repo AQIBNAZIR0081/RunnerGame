@@ -5,7 +5,7 @@ public class TaptoStart : MonoBehaviour
     public static TaptoStart instance;
     
     public GameObject InfoCanvas;
-    public bool isGameStart;
+    public bool isGameStart { get; set; }
 
     private Animator animator;
 
@@ -27,6 +27,5 @@ public class TaptoStart : MonoBehaviour
     {
         isGameStart = true;
         InfoCanvas.SetActive(false);
-        
     }
 }
