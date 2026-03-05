@@ -3,16 +3,29 @@ using UnityEngine.UI;
 
 public class TimerController : MonoBehaviour
 {
+    public static TimerController Instance { get; private set; }
+
     public float givenTime;
     public Text timer;
     public GameObject buttonToStartTimer;   // In the start of each level there is panel appear to give the info about controlls, by pressing the button of Info panel the timer will start and the panel will disappear.
+    public bool isTimerStarted { get; set; }
 
     private float timeLeft;
+
+    private void Awake()
+    {
+        if(Instance == null)
+        {
+            Instance = this;
+        }
+    }
+
 
     private void Start()
     {
         timeLeft = givenTime;
         timer.gameObject.SetActive(false);
+        isTimerStarted = true;
     }
 
     // Update is called once per frame
@@ -22,7 +35,10 @@ public class TimerController : MonoBehaviour
         {
             timer.gameObject.SetActive(true);
 
-            timeLeft -= Time.deltaTime;
+            if (isTimerStarted)
+            {
+                timeLeft -= Time.deltaTime;
+            }
 
             if (timeLeft <= 0)
             {

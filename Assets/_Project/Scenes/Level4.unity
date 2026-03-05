@@ -8429,6 +8429,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6534816736694529478, guid: ca8b74db0248dc64c85010df4d32d8a3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1114846382963196050}
+    - target: {fileID: 6534816736694529478, guid: ca8b74db0248dc64c85010df4d32d8a3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: GameStarted
+      objectReference: {fileID: 0}
     - target: {fileID: 8560001790410048833, guid: ca8b74db0248dc64c85010df4d32d8a3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -8450,7 +8458,17 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &386209743 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 7401898724000804755, guid: ca8b74db0248dc64c85010df4d32d8a3, type: 3}
+  m_CorrespondingSourceObject: {fileID: 2831704143713758911, guid: ca8b74db0248dc64c85010df4d32d8a3, type: 3}
+  m_PrefabInstance: {fileID: 386209740}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &386209744 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2858498194566831750, guid: ca8b74db0248dc64c85010df4d32d8a3, type: 3}
+  m_PrefabInstance: {fileID: 386209740}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &386209745 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3736379168826818287, guid: ca8b74db0248dc64c85010df4d32d8a3, type: 3}
   m_PrefabInstance: {fileID: 386209740}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &390071972
@@ -41783,6 +41801,14 @@ PrefabInstance:
       propertyPath: tapToStartBtn
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8575463823512666310, guid: da7705c1f307f994ba1baba8138a7f68, type: 3}
+      propertyPath: MovementInfoPanel
+      value: 
+      objectReference: {fileID: 386209745}
+    - target: {fileID: 8575463823512666310, guid: da7705c1f307f994ba1baba8138a7f68, type: 3}
+      propertyPath: ObjectPropertyPanel
+      value: 
+      objectReference: {fileID: 386209744}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

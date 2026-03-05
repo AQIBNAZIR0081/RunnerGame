@@ -57559,6 +57559,14 @@ PrefabInstance:
       propertyPath: tapToStartBtn
       value: 
       objectReference: {fileID: 786631657}
+    - target: {fileID: 8575463823512666310, guid: da7705c1f307f994ba1baba8138a7f68, type: 3}
+      propertyPath: MovementInfoPanel
+      value: 
+      objectReference: {fileID: 5095360891499846697}
+    - target: {fileID: 8575463823512666310, guid: da7705c1f307f994ba1baba8138a7f68, type: 3}
+      propertyPath: ObjectPropertyPanel
+      value: 
+      objectReference: {fileID: 5095360891499846696}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -58086,6 +58094,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6534816736694529478, guid: ca8b74db0248dc64c85010df4d32d8a3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1948838661}
+    - target: {fileID: 6534816736694529478, guid: ca8b74db0248dc64c85010df4d32d8a3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: GameStarted
+      objectReference: {fileID: 0}
     - target: {fileID: 8560001790410048833, guid: ca8b74db0248dc64c85010df4d32d8a3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -58095,6 +58111,21 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca8b74db0248dc64c85010df4d32d8a3, type: 3}
+--- !u!1 &5095360891499846695 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2831704143713758911, guid: ca8b74db0248dc64c85010df4d32d8a3, type: 3}
+  m_PrefabInstance: {fileID: 5095360891499846694}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5095360891499846696 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2858498194566831750, guid: ca8b74db0248dc64c85010df4d32d8a3, type: 3}
+  m_PrefabInstance: {fileID: 5095360891499846694}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5095360891499846697 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3736379168826818287, guid: ca8b74db0248dc64c85010df4d32d8a3, type: 3}
+  m_PrefabInstance: {fileID: 5095360891499846694}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5700396458852862702
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -58154,7 +58185,7 @@ PrefabInstance:
     - target: {fileID: 6934253032537005910, guid: 29dc2d9447f55f14dab001976d2b6ab1, type: 3}
       propertyPath: buttonToStartTimer
       value: 
-      objectReference: {fileID: 786631657}
+      objectReference: {fileID: 5095360891499846695}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -31,15 +31,15 @@ public class GameManager : MonoBehaviour
     public void WinGame()
     {
         winPanel.SetActive(true);
-        playerMovement.speed = 0;
+        TimerController.Instance.isTimerStarted = false;
     }
 
     public void LoseGame()
     {
-        playerMovement.speed = 0;
         losePanel.SetActive(true);
         losePanelAnimator.Play("LosePanelFadeIn");
         TaptoStart.instance.isGameStart = false;
+        TimerController.Instance.isTimerStarted = false;
     }
 
     public void Replay()
