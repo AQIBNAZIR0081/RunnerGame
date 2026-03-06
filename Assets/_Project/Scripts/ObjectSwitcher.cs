@@ -10,7 +10,7 @@ public class ObjectSwitcher : MonoBehaviour
 
 
     private Vector3 targetScale = new Vector3(0, 0, 0);
-    private Vector3 currentScale;
+    private Vector3 originalScale;
     private float elapsedTime = 0f;
 
 
@@ -31,7 +31,6 @@ public class ObjectSwitcher : MonoBehaviour
            
         }
     }
-
 
     public void OnClickPersonButton()
     {
@@ -62,16 +61,17 @@ public class ObjectSwitcher : MonoBehaviour
 
     IEnumerator ObjectLerpScale(GameObject obj)
     {
-        currentScale = obj.transform.localScale;
+        originalScale = obj.transform.localScale;
 
         while (elapsedTime < lerpScaleDuration)
         {
             float t = elapsedTime / lerpScaleDuration;
-            //obj.transform.localScale = new Vector3(0, 0, 0);
+
+            obj.transform.localScale = new Vector3(0, 0, 0);
 
             Debug.Log("Lerping " + obj.name + " local sale " + obj.transform.localScale);
 
-            obj.transform.localScale = Vector3.Lerp(targetScale, currentScale, t);
+            obj.transform.localScale = Vector3.Lerp(targetScale, originalScale, t);
             elapsedTime += Time.deltaTime;
             yield return null;
         }

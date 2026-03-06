@@ -21,7 +21,6 @@ public class CollisionDetection : MonoBehaviour
         }
     }
 
-
     private void Start()
     {
         // Initialize health slider to full health
@@ -65,7 +64,7 @@ public class CollisionDetection : MonoBehaviour
                     {
                         particle.Play();
                     }
-                    StartCoroutine(DeactivateObjectOnCollision(collision.gameObject));
+                    DeactivateObjectOnCollision(collision.gameObject);
                     break;
             }
         }
@@ -155,10 +154,19 @@ public class CollisionDetection : MonoBehaviour
         GameManager.Instance.LoseGame();
     }
 
-    IEnumerator DeactivateObjectOnCollision(GameObject obj)
+    private void DeactivateObjectOnCollision(GameObject obj)
     {
-        yield return new WaitForSeconds(0.05f);
+        AudioSource collisionObjAudio = obj.GetComponent<AudioSource>();
+        if (collisionObjAudio != null && !collisionObjAudio.isPlaying)
+        {
+            collisionObjAudio.Play();
+            StartCoroutine(DisableObject(obj));
+        }
+    }
 
+    IEnumerator DisableObject(GameObject obj)
+    {
+        yield return new WaitForSeconds(0.1f);
         obj.SetActive(false);
     }
 
