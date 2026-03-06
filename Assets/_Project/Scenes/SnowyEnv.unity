@@ -20454,10 +20454,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: cone
       objectReference: {fileID: 0}
-    - target: {fileID: 1105154338503852916, guid: f4b101d5310c9a7428e807e273604b47, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 5971117311145028975, guid: f4b101d5310c9a7428e807e273604b47, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.097
