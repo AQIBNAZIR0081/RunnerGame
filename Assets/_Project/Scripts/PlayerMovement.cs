@@ -3,6 +3,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public CharacterEnums charEnums;
+    public CharacterController characterController;
 
     [Header("Audio Setting")]
     public AudioSource objSource;
@@ -66,7 +67,14 @@ public class PlayerMovement : MonoBehaviour
             if (anim != null && charEnums == CharacterEnums.Person)
                 anim.SetBool("IsRunning", true);
 
-            transform.Translate(Vector3.forward * speed * Time.fixedDeltaTime);
+            if(charEnums == CharacterEnums.Bulldozer || charEnums == CharacterEnums.Car) {
+                transform.Translate(Vector3.forward * speed * Time.fixedDeltaTime);
+            }
+            else {
+                Vector3 movementDirection = transform.forward;
+                characterController.Move(movementDirection * speed * Time.fixedDeltaTime);
+            }
+
 
             if (rb.position.y < -0.3f)
             {
