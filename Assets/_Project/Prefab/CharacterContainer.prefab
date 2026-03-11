@@ -431,9 +431,9 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 116
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!65 &1633388102248749575
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -471,7 +471,7 @@ MonoBehaviour:
   characterController: {fileID: 0}
   objSource: {fileID: 6274821437284086485}
   audioManager: {fileID: 0}
-  speed: 6
+  speed: 4
   sidewaysSpeed: 10
   swipDistanceY: 80
   jumpForce: 8
@@ -2510,7 +2510,7 @@ CharacterController:
   m_Height: 1.5
   m_Radius: 0.25
   m_SlopeLimit: 90
-  m_StepOffset: 0.7
+  m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.75, z: 0}
