@@ -383,7 +383,6 @@ GameObject:
   - component: {fileID: 1633388102248749575}
   - component: {fileID: 975900061966373453}
   - component: {fileID: 5804271077467497278}
-  - component: {fileID: 4460645755549504421}
   - component: {fileID: 6274821437284086485}
   m_Layer: 0
   m_Name: Bulldozer
@@ -454,8 +453,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.4803828, y: 0.57402396, z: 0.28920436}
-  m_Center: {x: -0.002854526, y: 0.28798282, z: 1.12188}
+  m_Size: {x: 1.4803828, y: 0.57402396, z: 0.47056007}
+  m_Center: {x: -0.002854526, y: 0.28798282, z: 1.2125578}
 --- !u!114 &975900061966373453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -494,20 +493,6 @@ MonoBehaviour:
   healthSlider: {fileID: 0}
   healthReductionAmount: 0.2
   healthIncreasingAmount: 0.2
---- !u!114 &4460645755549504421
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1024332215288651306}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67e84ac939697994092c42d3a735fde4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FollowCamera
-  _camera: {fileID: 0}
-  offset: {x: 0, y: 3.5, z: -8}
 --- !u!82 &6274821437284086485
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2451,7 +2436,6 @@ GameObject:
   - component: {fileID: 934136546798240444}
   - component: {fileID: 7425746659421544637}
   - component: {fileID: 7769568676769949999}
-  - component: {fileID: 7471733428511154484}
   - component: {fileID: 3286853881142202941}
   m_Layer: 0
   m_Name: Timmy
@@ -2470,7 +2454,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5365846508031863345}
@@ -2501,7 +2485,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
@@ -2565,10 +2549,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   charEnums: 0
-  characterController: {fileID: 0}
+  characterController: {fileID: 2323057549581535582}
   objSource: {fileID: 3286853881142202941}
   audioManager: {fileID: 0}
-  speed: 8
+  speed: 5
   sidewaysSpeed: 10
   swipDistanceY: 80
   jumpForce: 5
@@ -2590,20 +2574,6 @@ MonoBehaviour:
   healthSlider: {fileID: 0}
   healthReductionAmount: 0.2
   healthIncreasingAmount: 0.2
---- !u!114 &7471733428511154484
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5237466360958297530}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67e84ac939697994092c42d3a735fde4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FollowCamera
-  _camera: {fileID: 0}
-  offset: {x: 0, y: 3.5, z: -8}
 --- !u!82 &3286853881142202941
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3223,7 +3193,6 @@ GameObject:
   - component: {fileID: 8092962106503417288}
   - component: {fileID: 8648440704237055411}
   - component: {fileID: 5333688591019585030}
-  - component: {fileID: 7018679869093088269}
   - component: {fileID: 7462777017266645058}
   m_Layer: 0
   m_Name: Car
@@ -3334,20 +3303,6 @@ MonoBehaviour:
   healthSlider: {fileID: 0}
   healthReductionAmount: 0.2
   healthIncreasingAmount: 0.2
---- !u!114 &7018679869093088269
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7325626902390445411}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67e84ac939697994092c42d3a735fde4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FollowCamera
-  _camera: {fileID: 0}
-  offset: {x: 0, y: 3.5, z: -8}
 --- !u!82 &7462777017266645058
 AudioSource:
   m_ObjectHideFlags: 0
