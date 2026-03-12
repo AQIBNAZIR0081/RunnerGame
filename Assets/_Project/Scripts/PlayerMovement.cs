@@ -1,7 +1,6 @@
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
-{
+public class PlayerMovement : MonoBehaviour {
     public CharacterEnums charEnums;
     public CharacterController characterController;
 
@@ -33,64 +32,73 @@ public class PlayerMovement : MonoBehaviour
     //private Vector3 deltaPosition;
     //private bool isMovingLeft = false;
     //private bool isMovingRight = false;
+    private void OnEnable() {
+        // Re-acquire references when object becomes active
+        if (characterController == null) {
+            characterController = GetComponent<CharacterController>();
+        }
+    }
 
-    private void Start()
-    {
+    private void Start() {
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
         objSource = GetComponent<AudioSource>();
-        
+
+        if (characterController == null) {
+            characterController = GetComponent<CharacterController>();
+        }
+
     }
 
-    private void Update()
-    {
-        if (TaptoStart.instance.isGameStart)
-        {
+
+    private void Update() {
+        if (TaptoStart.instance.isGameStart) {
             SwipeController.Instance.TouchesInput(transform.gameObject);
         }
 
         //SwipController();
     }
 
-    private void FixedUpdate()
-    {
-        if(TaptoStart.instance.isGameStart)
-        {
+    private void FixedUpdate() {
+
+        if (!gameObject.activeInHierarchy) return;
+
+        if (TaptoStart.instance.isGameStart) {
             buttonsPanel.SetActive(true);
 
             // play audio according to active object
-            if (audioManager != null)
-            {
+            if (audioManager != null) {
                 audioManager.PlayAudioForRespectiveObject(charEnums, objSource);
             }
 
             if (anim != null && charEnums == CharacterEnums.Person)
                 anim.SetBool("IsRunning", true);
 
-            if(charEnums == CharacterEnums.Bulldozer || charEnums == CharacterEnums.Car) {
-                transform.Translate(Vector3.forward * speed * Time.fixedDeltaTime);
+            if (characterController != null) {
+                Vector3 movementDirection = transform.forward;
+                if (characterController != null && characterController.enabled && characterController.gameObject.activeInHierarchy) {
+                    characterController.Move(movementDirection * speed * Time.fixedDeltaTime);
+                }
+
             }
             else {
-                Vector3 movementDirection = transform.forward;
-                characterController.Move(movementDirection * speed * Time.fixedDeltaTime);
+                transform.Translate(Vector3.forward * speed * Time.fixedDeltaTime);
             }
 
 
-            if (rb.position.y < -0.3f)
-            {
+            if (rb.position.y < -0.3f) {
                 if (anim != null && charEnums == CharacterEnums.Person)
                     anim.SetBool("IsRunning", false);
                 GameManager.Instance.LoseGame();
             }
         }
-        else
-        {
+        else {
             if (anim != null)
                 anim.Play("Idle");
         }
 
     }
-
+    
 
     //private void Jump()
     //{
@@ -98,7 +106,7 @@ public class PlayerMovement : MonoBehaviour
     //    {
     //        if(jumpSound != null) 
     //            jumpSound.Play();
-            
+
     //        particle.Play();
     //        rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
     //        anim.SetTrigger("IsJumped");

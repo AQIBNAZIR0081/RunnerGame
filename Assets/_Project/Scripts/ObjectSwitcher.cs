@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using UnityEngine;
 
@@ -72,18 +71,23 @@ public class ObjectSwitcher : MonoBehaviour
         // set position to match previous active object position
         if (previousActiveObject != null) {
             newObject.transform.position = previousActiveObject.transform.position;
+            newObject.transform.rotation = previousActiveObject.transform.rotation;
         }
 
         // start with zero scale
         newObject.transform.localScale = Vector3.zero;
 
         // Activate the object 
-        newObject.SetActive(true);
+        StartCoroutine(ActivateNewObject(newObject));
 
         // Start the lerp coroutine
         StartCoroutine(ObjectLerpScale(newObject));
     }
 
+    IEnumerator ActivateNewObject(GameObject newObject) {
+        yield return new WaitForSeconds(0.1f); // small delay to ensure the object is set to zero scale before activating
+        newObject.SetActive(true);
+    }
 
     IEnumerator ObjectLerpScale(GameObject obj)
     {

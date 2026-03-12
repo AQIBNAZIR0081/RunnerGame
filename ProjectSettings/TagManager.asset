@@ -11,6 +11,15 @@ TagManager:
   - Coin
   - Bridge
   - RockTrigger
+  - FinishLine
+  - Stairs
+  - ClimbableWall
+  - StartClimbing
+  - Ground
+  - Escalator
+  - StartSliding
+  - ClimbToTop
+  - WaterSlide
   layers:
   - Default
   - TransparentFX
@@ -18,7 +27,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Ground
   - 
   - 
   - 

@@ -1906,14 +1906,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CharacterContainer
       objectReference: {fileID: 0}
-    - target: {fileID: 3286853881142202941, guid: 1e689307ff5008447a7d67affa224438, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3286853881142202941, guid: 1e689307ff5008447a7d67affa224438, type: 3}
-      propertyPath: MaxDistance
-      value: 1.01
-      objectReference: {fileID: 0}
     - target: {fileID: 5333688591019585030, guid: 1e689307ff5008447a7d67affa224438, type: 3}
       propertyPath: hitSound
       value: 
