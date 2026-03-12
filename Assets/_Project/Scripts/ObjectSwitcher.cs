@@ -8,8 +8,6 @@ public class ObjectSwitcher : MonoBehaviour
     [Header("Lerping Scale")]
     public float lerpScaleDuration = 0.5f;
 
-
-    private Vector3 targetScale = new Vector3(0, 0, 0);
     private Vector3 originalScale;
     private float elapsedTime = 0f;
 
@@ -19,6 +17,17 @@ public class ObjectSwitcher : MonoBehaviour
     private GameObject previousActiveObject;
 
 
+    private void Start() {
+        for (int i = 0; i < characterContainer.Length; i++)
+        {
+            if (characterContainer[i].activeInHierarchy)
+            {
+                previousActiveObject = characterContainer[i];
+                break;
+            }
+        }
+    }
+
     private void SwitchObjectCheck()
     {
         for (int i = 0; i < characterContainer.Length; i++)
@@ -27,6 +36,7 @@ public class ObjectSwitcher : MonoBehaviour
             {
                 previousActiveObject = characterContainer[i];
                 previousActiveObject.SetActive(false);
+                break;
             }
            
         }
@@ -50,33 +60,52 @@ public class ObjectSwitcher : MonoBehaviour
         ActivateObject(2);
     }
 
-    private void ActivateObject(int activeObjectIndex)
-    {
+    private void ActivateObject(int activeObjectIndex) {
+        // stop and ongoing lerp coroutine before starting a new one
+        StopAllCoroutines();
 
-        characterContainer[activeObjectIndex].transform.position = previousActiveObject.transform.position;
-        StartCoroutine(ObjectLerpScale(characterContainer[activeObjectIndex]));
-        characterContainer[activeObjectIndex].SetActive(true);
+        GameObject newObject = characterContainer[activeObjectIndex];
+
+        // store the originalScale of the new object before setting it to zero for the lerp
+        originalScale = newObject.transform.localScale;
+
+        // set position to match previous active object position
+        if (previousActiveObject != null) {
+            newObject.transform.position = previousActiveObject.transform.position;
+        }
+
+        // start with zero scale
+        newObject.transform.localScale = Vector3.zero;
+
+        // Activate the object 
+        newObject.SetActive(true);
+
+        // Start the lerp coroutine
+        StartCoroutine(ObjectLerpScale(newObject));
     }
 
 
     IEnumerator ObjectLerpScale(GameObject obj)
     {
-        originalScale = obj.transform.localScale;
+        elapsedTime = 0f;
 
         while (elapsedTime < lerpScaleDuration)
         {
             float t = elapsedTime / lerpScaleDuration;
 
-            obj.transform.localScale = new Vector3(0, 0, 0);
-
             Debug.Log("Lerping " + obj.name + " local sale " + obj.transform.localScale);
 
-            obj.transform.localScale = Vector3.Lerp(targetScale, originalScale, t);
+            obj.transform.localScale = Vector3.Lerp(Vector3.zero, originalScale, t);
+
             elapsedTime += Time.deltaTime;
+
             yield return null;
         }
 
-        elapsedTime = 0;
+        // Ensure the final scale is set to the original scale
+        obj.transform.localScale = originalScale;
+
+        elapsedTime = 0f;
     }
 
 }

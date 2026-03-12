@@ -432,7 +432,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 1
-  m_Constraints: 116
+  m_Constraints: 112
   m_CollisionDetection: 2
 --- !u!65 &1633388102248749575
 BoxCollider:
@@ -2520,7 +2520,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 1
-  m_Constraints: 116
+  m_Constraints: 112
   m_CollisionDetection: 2
 --- !u!143 &2323057549581535582
 CharacterController:
@@ -2716,7 +2716,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c74293c0aa948cc49b26599ab4b91162, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  climbSpeed: 5
+  climbSpeed: 3
 --- !u!1 &5251512328246003964
 GameObject:
   m_ObjectHideFlags: 0
@@ -3288,7 +3288,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 1
-  m_Constraints: 116
+  m_Constraints: 112
   m_CollisionDetection: 2
 --- !u!65 &8092962106503417288
 BoxCollider:

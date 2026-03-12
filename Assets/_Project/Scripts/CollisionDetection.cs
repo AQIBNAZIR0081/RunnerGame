@@ -31,7 +31,7 @@ public class CollisionDetection : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("Finish"))
+        if (other.gameObject.CompareTag("FinishLine"))
         {
             GameManager.Instance.WinGame();
 
