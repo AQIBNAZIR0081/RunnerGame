@@ -3,12 +3,15 @@ using UnityEngine;
 
 public class FollowCamera : MonoBehaviour
 {
-    public CinemachineCamera _camera;
-    public GameObject[] _targets;
+    [SerializeField] private CinemachineCamera _camera;
+    [SerializeField] private GameObject[] _targets;
 
     private void Start()
     {
-        _camera = FindAnyObjectByType<CinemachineCamera>();
+        if(_camera == null) {
+
+            _camera = FindAnyObjectByType<CinemachineCamera>();
+        }
     }
 
     private void LateUpdate()

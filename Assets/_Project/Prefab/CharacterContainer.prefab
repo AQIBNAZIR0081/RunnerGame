@@ -1185,6 +1185,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5104800792972755218}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1908107287242438367
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6962758072357303714}
+  m_Layer: 0
+  m_Name: GroundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6962758072357303714
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1908107287242438367}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1182738114171019040}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1974804319244739739
 GameObject:
   m_ObjectHideFlags: 0
@@ -2437,6 +2468,7 @@ GameObject:
   - component: {fileID: 7425746659421544637}
   - component: {fileID: 7769568676769949999}
   - component: {fileID: 3286853881142202941}
+  - component: {fileID: 1780110225096937011}
   m_Layer: 0
   m_Name: Timmy
   m_TagString: Player
@@ -2460,6 +2492,7 @@ Transform:
   - {fileID: 5365846508031863345}
   - {fileID: 4937255699445052451}
   - {fileID: 4260051047305815482}
+  - {fileID: 6962758072357303714}
   m_Father: {fileID: 216069924773930404}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &6078606497866228899
@@ -2486,9 +2519,9 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 1
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 116
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!143 &2323057549581535582
 CharacterController:
   m_ObjectHideFlags: 0
@@ -2671,6 +2704,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1780110225096937011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5237466360958297530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c74293c0aa948cc49b26599ab4b91162, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  climbSpeed: 5
 --- !u!1 &5251512328246003964
 GameObject:
   m_ObjectHideFlags: 0
@@ -3241,9 +3287,9 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 116
-  m_CollisionDetection: 1
+  m_CollisionDetection: 2
 --- !u!65 &8092962106503417288
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3263,8 +3309,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.14, y: 0.5, z: 2.37}
-  m_Center: {x: 0, y: 0.28, z: 0}
+  m_Size: {x: 1.14, y: 0.5193155, z: 2.37}
+  m_Center: {x: 0, y: 0.27034223, z: 0}
 --- !u!114 &8648440704237055411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3281,7 +3327,7 @@ MonoBehaviour:
   characterController: {fileID: 0}
   objSource: {fileID: 7462777017266645058}
   audioManager: {fileID: 0}
-  speed: 15
+  speed: 6
   sidewaysSpeed: 10
   swipDistanceY: 80
   jumpForce: 8
