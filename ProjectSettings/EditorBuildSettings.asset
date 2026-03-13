@@ -27,7 +27,7 @@ EditorBuildSettings:
     path: Assets/_Project/Scenes/SnowyEnv.unity
     guid: 426e3b5b821b87549877b35313bfc1f1
   - enabled: 1
-    path: Assets/_Project/Scenes/Level4.unity
+    path: Assets/_Project/Scenes/Level4_1.unity
     guid: affc6e67750cca84094bc4ce781dc33c
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 289c1b55c9541489481df5cc06664110, type: 3}
