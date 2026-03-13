@@ -19,10 +19,10 @@ public class ClimbUp : MonoBehaviour {
     }
 
     private void Update() {
-        
+
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
-        if(velocity.y < 0 && isGrounded) {
+        if (velocity.y < 0 && isGrounded) {
             velocity.y = -2f; // Small negative value to keep the player grounded
         }
 
@@ -32,9 +32,10 @@ public class ClimbUp : MonoBehaviour {
 
 
     private void OnTriggerStay(Collider other) {
+
+        // set for ladders and wall climbing
         if (other.CompareTag("ClimbToTop")) {
             // Move the player up while they are in the trigger
-            
             controller.Move(Vector3.up * climbSpeed * Time.deltaTime);
 
             if (anim != null) {
@@ -42,14 +43,23 @@ public class ClimbUp : MonoBehaviour {
             }
         }
 
+        // set for water slide
         if (other.CompareTag("WaterSlide")) {
             if (anim != null && isGrounded) {
                 anim.SetBool("IsSliding", true);
             }
         }
+
+        if (other.CompareTag("Water")) {
+            if (anim != null) {
+                anim.SetBool("IsSwimming", true);
+            }
+        }
     }
 
     private void OnTriggerExit(Collider other) {
+
+        // set for ladders and wall climbing
         if (other.CompareTag("ClimbToTop")) {
             // Stop climbing when the player exits the trigger
             if (anim != null) {
@@ -57,9 +67,17 @@ public class ClimbUp : MonoBehaviour {
             }
         }
 
+        // set for water slide
         if (other.CompareTag("WaterSlide")) {
             if (anim != null) {
                 anim.SetBool("IsSliding", false);
+            }
+        }
+
+
+        if (other.CompareTag("Water")) {
+            if (anim != null) {
+                anim.SetBool("IsSwimming", false);
             }
         }
     }
