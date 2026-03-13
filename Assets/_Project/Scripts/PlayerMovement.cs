@@ -82,7 +82,8 @@ public class PlayerMovement : MonoBehaviour {
 
             }
             else {
-                transform.Translate(Vector3.forward * speed * Time.fixedDeltaTime);
+                // Move the player in z direction based on speed
+                rb.linearVelocity = transform.forward * speed;
             }
 
 
