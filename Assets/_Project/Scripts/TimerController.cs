@@ -42,8 +42,8 @@ public class TimerController : MonoBehaviour
 
             if (timeLeft <= 0)
             {
-                CollisionDetection.Instance.DisableAllScripts();
                 GameManager.Instance.LoseGame();
+                CollisionDetection.Instance.DisableAllScripts();
             }else if (timeLeft > 60){
                 FormatToMinSec();
             }else{

@@ -87,11 +87,11 @@ public class PlayerMovement : MonoBehaviour {
             }
 
 
-            if (rb.position.y < -0.5f) {
-                if (anim != null && charEnums == CharacterEnums.Person)
-                    anim.SetBool("IsRunning", false);
-                GameManager.Instance.LoseGame();
-            }
+            //if (rb.position.y < -0.5f) {
+            //    if (anim != null && charEnums == CharacterEnums.Person)
+            //        anim.SetBool("IsRunning", false);
+            //    GameManager.Instance.LoseGame();
+            //}
         }
         else {
             if (anim != null)
