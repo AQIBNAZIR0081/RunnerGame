@@ -68,10 +68,10 @@ public class CollisionDetection : MonoBehaviour
             }
         }
 
-        if (collision.gameObject.CompareTag("Bridge"))
-        {
-            HandleHit();
-        }
+        //if (collision.gameObject.CompareTag("Bridge"))
+        //{
+        //    HandleHit();
+        //}
     }
 
     private void SizeIncreaser(Collider other)

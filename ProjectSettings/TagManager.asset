@@ -7,17 +7,12 @@ TagManager:
   - Obstacle
   - SizeReducer
   - SizeIncreaser
-  - CubeDecal
-  - Coin
-  - Bridge
-  - RockTrigger
   - FinishLine
   - Stairs
   - ClimbableWall
   - StartClimbing
   - Ground
   - Escalator
-  - StartSliding
   - ClimbToTop
   - WaterSlide
   layers:

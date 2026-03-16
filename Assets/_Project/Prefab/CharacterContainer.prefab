@@ -415,7 +415,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1024332215288651306}
   serializedVersion: 5
-  m_Mass: 2
+  m_Mass: 3
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -433,7 +433,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 1
   m_Constraints: 112
-  m_CollisionDetection: 2
+  m_CollisionDetection: 1
 --- !u!65 &1633388102248749575
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3277,7 +3277,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7325626902390445411}
   serializedVersion: 5
-  m_Mass: 1
+  m_Mass: 2
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -3295,7 +3295,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 1
   m_Constraints: 112
-  m_CollisionDetection: 2
+  m_CollisionDetection: 1
 --- !u!65 &8092962106503417288
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3333,7 +3333,7 @@ MonoBehaviour:
   characterController: {fileID: 0}
   objSource: {fileID: 7462777017266645058}
   audioManager: {fileID: 0}
-  speed: 6
+  speed: 8
   sidewaysSpeed: 10
   swipDistanceY: 80
   jumpForce: 8

@@ -83,11 +83,11 @@ public class PlayerMovement : MonoBehaviour {
             }
             else {
                 // Move the player in z direction based on speed
-                rb.linearVelocity = transform.forward * speed;
+                rb.linearVelocity = new Vector3(rb.linearVelocity.x, rb.linearVelocity.y, transform.forward.z * speed);
             }
 
 
-            if (rb.position.y < -0.3f) {
+            if (rb.position.y < -0.5f) {
                 if (anim != null && charEnums == CharacterEnums.Person)
                     anim.SetBool("IsRunning", false);
                 GameManager.Instance.LoseGame();
