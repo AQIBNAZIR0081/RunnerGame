@@ -25,7 +25,7 @@ public class MainMenuManager : MonoBehaviour
     // Start the game on button click
     public void StartGame()
     {
-        SceneManager.LoadScene("EnvironmentSelection");
+        SceneManager.LoadScene("Level1");
     }
 
 
