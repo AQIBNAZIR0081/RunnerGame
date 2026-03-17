@@ -224,7 +224,7 @@ Camera:
     height: 1
   near clip plane: 0.01
   far clip plane: 50
-  field of view: 84
+  field of view: 95.62065
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -250,8 +250,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6033042}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.04665007, y: -0.43479958, z: 0.022561334, w: 0.89903516}
-  m_LocalPosition: {x: 5.5, y: 5.1, z: -4.5}
+  m_LocalRotation: {x: 0.048325025, y: -0.3605097, z: 0.018706508, w: 0.93131495}
+  m_LocalPosition: {x: 3.9991646, y: 5.1, z: -4.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -418,50 +418,6 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 2368219732148085187, guid: e2f23f9d45d35b448a8134eac71db4e8, type: 3}
   m_PrefabInstance: {fileID: 1742030755}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &99040440
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 99040442}
-  - component: {fileID: 99040441}
-  m_Layer: 0
-  m_Name: CoinManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &99040441
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 99040440}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9be95fb205140c343ae69df891af83bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CoinManager
---- !u!4 &99040442
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 99040440}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.89346, y: 0.00486, z: 14.35257}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1859968740}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &300897035
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1034,7 +990,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6319377218243447157, guid: 04ebbda16bb90504aa62db87ab239208, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.5
+      value: 3.9991646
       objectReference: {fileID: 0}
     - target: {fileID: 6319377218243447157, guid: 04ebbda16bb90504aa62db87ab239208, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1046,27 +1002,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6319377218243447157, guid: 04ebbda16bb90504aa62db87ab239208, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.8990351
+      value: 0.93131495
       objectReference: {fileID: 0}
     - target: {fileID: 6319377218243447157, guid: 04ebbda16bb90504aa62db87ab239208, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.046650067
+      value: 0.048325025
       objectReference: {fileID: 0}
     - target: {fileID: 6319377218243447157, guid: 04ebbda16bb90504aa62db87ab239208, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.43479958
+      value: -0.3605097
       objectReference: {fileID: 0}
     - target: {fileID: 6319377218243447157, guid: 04ebbda16bb90504aa62db87ab239208, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.022561334
+      value: 0.018706508
       objectReference: {fileID: 0}
     - target: {fileID: 6319377218243447157, guid: 04ebbda16bb90504aa62db87ab239208, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 5.941
       objectReference: {fileID: 0}
     - target: {fileID: 6319377218243447157, guid: 04ebbda16bb90504aa62db87ab239208, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -42.323
       objectReference: {fileID: 0}
     - target: {fileID: 6319377218243447157, guid: 04ebbda16bb90504aa62db87ab239208, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -1081,6 +1037,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04ebbda16bb90504aa62db87ab239208, type: 3}
+--- !u!114 &1324205515 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7615614625115469226, guid: 04ebbda16bb90504aa62db87ab239208, type: 3}
+  m_PrefabInstance: {fileID: 1324205514}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9dfa5b682dcd46bda6128250e975f58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineCamera
 --- !u!1 &1403384845
 GameObject:
   m_ObjectHideFlags: 0
@@ -1275,7 +1242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67e84ac939697994092c42d3a735fde4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FollowCamera
-  _camera: {fileID: 0}
+  _camera: {fileID: 1324205515}
   _targets:
   - {fileID: 1869427510135419292}
   - {fileID: 1869427510135419291}
@@ -1507,38 +1474,6 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 3581497946241268233, guid: e2f23f9d45d35b448a8134eac71db4e8, type: 3}
   m_PrefabInstance: {fileID: 1742030755}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1859968739
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1859968740}
-  m_Layer: 0
-  m_Name: CoinCointainer
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1859968740
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1859968739}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 99040442}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &644005613323440775
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1846,9 +1781,6 @@ SceneRoots:
   - {fileID: 705507995}
   - {fileID: 1484726920}
   - {fileID: 864135403}
-  - {fileID: 1859968740}
-  - {fileID: 1403384847}
-  - {fileID: 410744956}
   - {fileID: 1869427510135419289}
   - {fileID: 1527499225}
   - {fileID: 1114846382963196049}
@@ -1857,3 +1789,5 @@ SceneRoots:
   - {fileID: 441003253}
   - {fileID: 1324205514}
   - {fileID: 1633649048}
+  - {fileID: 1403384847}
+  - {fileID: 410744956}
